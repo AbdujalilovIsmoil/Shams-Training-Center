@@ -1,1 +1,1 @@
-# Shams Oquv Markaz
+# Shams Training Center
