@@ -1,0 +1,31 @@
+.header {
+  top: 0;
+  z-index: 1;
+  position: sticky;
+  margin-bottom: 120px;
+  background-color: $light-color;
+
+  &__container {
+    padding: 28px 0px;
+    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+  }
+
+  &-logo {
+    height: 70px;
+    width: 146px;
+  }
+
+  &-contact {
+    padding: 18px 36px;
+    font-family: Montserrat;
+    border: 1px solid $navigation-link-color;
+    background-color: $navigation-link-color;
+    transition: color 150ms linear, background-color 150ms linear;
+    @include headingFonts($light-color, 16px, 400, 19.5px, none);
+
+    &:hover {
+      color: $navigation-link-color;
+      background-color: transparent;
+    }
+  }
+}

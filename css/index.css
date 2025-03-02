@@ -54,4 +54,129 @@ body {
   max-width: 1440px;
 }
 
+.header {
+  top: 0;
+  z-index: 1;
+  position: sticky;
+  margin-bottom: 120px;
+  background-color: #ffffff;
+}
+.header__container {
+  padding: 28px 0px;
+  gap: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.header-logo {
+  height: 70px;
+  width: 146px;
+}
+.header-contact {
+  padding: 18px 36px;
+  font-family: Montserrat;
+  border: 1px solid #1e1e1e;
+  background-color: #1e1e1e;
+  transition: color 150ms linear, background-color 150ms linear;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-transform: none;
+}
+.header-contact:hover {
+  color: #1e1e1e;
+  background-color: transparent;
+}
+
+.nav__list {
+  max-width: 540px;
+  min-width: 540px;
+  gap: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.nav__item-link {
+  letter-spacing: 0%;
+  transition: color 150ms linear;
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-transform: none;
+}
+.nav__item-link:hover {
+  color: #e18a07;
+}
+
+.hero__content {
+  margin: 0 auto;
+  max-width: 1040px;
+  min-width: 1040px;
+  text-align: center;
+}
+.hero__content-span {
+  color: #e18a07;
+}
+.hero__content-title {
+  margin-bottom: 24px;
+  font-family: "Libre Baskerville";
+  color: #1e1e1e;
+  font-size: 90px;
+  line-height: 111.6px;
+  font-weight: 700;
+  text-transform: none;
+}
+.hero__content-text {
+  margin-bottom: 60px;
+  color: #1e1e1e;
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 400;
+  text-transform: none;
+}
+.hero__contact {
+  margin-bottom: 60px;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+}
+.hero__contact-btn {
+  padding: 18px 40px;
+  background-color: #1e1e1e;
+  border: 2px solid #1e1e1e;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-transform: none;
+  transition: color 150ms linear, background-color 150ms linear;
+}
+.hero__contact-btn:hover {
+  color: #1e1e1e;
+  background-color: transparent;
+}
+.hero__contact-btn--orange {
+  color: #e18a07;
+  border: 2px solid #e18a07;
+  background-color: transparent;
+}
+.hero__contact-btn--orange:hover {
+  color: #ffffff;
+  background-color: #e18a07;
+}
+.hero__play {
+  cursor: pointer;
+  margin-bottom: 120px;
+}
+.hero__play-icon {
+  width: 30px;
+  height: 30px;
+}
+
 /*# sourceMappingURL=index.css.map */

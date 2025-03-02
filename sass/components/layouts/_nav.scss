@@ -1,0 +1,21 @@
+.nav {
+  &__list {
+    max-width: 540px;
+    min-width: 540px;
+    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+  }
+
+  &__item {
+    &-link {
+      letter-spacing: 0%;
+
+      transition: color 150ms linear;
+
+      @include headingFonts($navigation-link-color, 16px, 400, 19.5px, none);
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+}
