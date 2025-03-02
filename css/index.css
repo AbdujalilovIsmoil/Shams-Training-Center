@@ -258,4 +258,106 @@ body {
   text-transform: none;
 }
 
+.highlight {
+  padding: 56px 0px;
+  background-color: #f5f6f9;
+}
+.highlight__content {
+  margin: 0 auto;
+  max-width: 575px;
+  min-width: 575px;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.highlight__content-span {
+  color: #e18a07;
+}
+.highlight__content-title {
+  margin-bottom: 12px;
+  font-family: "Libre Baskerville";
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 62.4px;
+  font-weight: 700;
+  text-transform: none;
+}
+.highlight__content-text {
+  color: #1e1e1e;
+  font-size: 20px;
+  line-height: 30px;
+  font-weight: 400;
+  text-transform: none;
+}
+.highlight__content-icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 12px;
+}
+.highlight__list {
+  margin-bottom: 80px;
+  gap: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.highlight__item {
+  max-width: 270px;
+  min-width: 270px;
+  text-align: center;
+}
+.highlight__item-title {
+  margin-bottom: 12px;
+  color: #1e1e1e;
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 700;
+  text-transform: none;
+}
+.highlight__item-text {
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  text-transform: none;
+}
+.highlight__contact {
+  gap: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.highlight__contact-title {
+  margin-bottom: 10px;
+  color: #1e1e1e;
+  font-size: 30px;
+  line-height: 36.57px;
+  font-weight: 700;
+  text-transform: none;
+}
+.highlight__contact-text {
+  margin-bottom: 28px;
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 400;
+  text-transform: none;
+}
+.highlight__contact-btn {
+  padding: 18px 36px;
+  background-color: #e18a07;
+  border: 2px solid #e18a07;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  text-transform: none;
+  transition: color 150ms linear, background-color 150ms linear;
+}
+.highlight__contact-btn:hover {
+  color: #e18a07;
+  background-color: transparent;
+}
+
 /*# sourceMappingURL=index.css.map */
