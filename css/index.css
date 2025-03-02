@@ -212,4 +212,50 @@ body {
   text-transform: none;
 }
 
+.services {
+  margin-bottom: 120px;
+}
+.services-title {
+  text-align: center;
+  margin-bottom: 36px;
+  font-family: "Libre Baskerville";
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 59.52px;
+  font-weight: 700;
+  text-transform: none;
+}
+.services-span {
+  color: #e18a07;
+}
+.services__list {
+  gap: 20px;
+  display: flex;
+  align-items: center;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+.services__item {
+  padding: 24px;
+  max-width: 440px;
+  min-width: 440px;
+  text-align: center;
+  background-color: #f5f6f9;
+}
+.services__item-title {
+  margin-bottom: 16px;
+  color: #1e1e1e;
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 700;
+  text-transform: none;
+}
+.services__item-text {
+  color: #606060;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: none;
+}
+
 /*# sourceMappingURL=index.css.map */

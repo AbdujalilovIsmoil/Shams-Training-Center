@@ -1,0 +1,36 @@
+.services {
+  margin-bottom: 120px;
+  &-title {
+    text-align: center;
+    margin-bottom: 36px;
+    font-family: "Libre Baskerville";
+
+    @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+  }
+
+  &-span {
+    color: $main-color;
+  }
+
+  &__list {
+    @include flexLayout(flex, center, center, 20px, row wrap);
+  }
+
+  &__item {
+    padding: 24px;
+    max-width: 440px;
+    min-width: 440px;
+    text-align: center;
+
+    background-color: $services-background-color;
+
+    &-title {
+      margin-bottom: 16px;
+      @include headingFonts($navigation-link-color, 24px, 700, 29.26px, none);
+    }
+
+    &-text {
+      @include headingFonts($services-text-color, 16px, 500, 24px, none);
+    }
+  }
+}
