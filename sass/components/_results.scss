@@ -1,0 +1,22 @@
+.results {
+  padding: 36px 0px;
+  margin-bottom: 120px;
+  background-color: $navigation-link-color;
+  &__list {
+    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+  }
+
+  &__item {
+    max-width: 210px;
+    min-width: 210px;
+    text-align: center;
+    &-title {
+      margin-bottom: 12px;
+      @include headingFonts($light-color, 50px, 600, 60.95px, none);
+    }
+
+    &-text {
+      @include headingFonts($light-color, 20px, 500, 24.38px, none);
+    }
+  }
+}
