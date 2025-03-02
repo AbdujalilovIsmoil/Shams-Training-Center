@@ -1,0 +1,85 @@
+.definition {
+  &__container {
+    padding: 24px;
+  }
+
+  &-title {
+    text-align: center;
+    margin-bottom: 36px;
+    font-family: "Libre Baskerville";
+    @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+  }
+
+  &-span {
+    color: $main-color;
+  }
+
+  &__cards {
+    @include gridLayout(grid, 3, 20px);
+  }
+
+  &__card {
+    max-width: 440px;
+    min-width: 440px;
+    background-color: $card-background-color;
+    &-img {
+      width: 440px;
+      height: 440px;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    margin-bottom: 30px;
+    @include flexLayout(flex, space-between, flex-start, 0px, row nowrap);
+
+    &-title {
+      @include headingFonts($navigation-link-color, 24px, 500, 29.26px, none);
+    }
+  }
+
+  &__price {
+    text-align: right;
+    &-title {
+      margin-bottom: 8px;
+      @include headingFonts($navigation-link-color, 24px, 700, 29.26px, none);
+    }
+
+    &-sub-title {
+      @include headingFonts($navigation-link-color, 20px, 600, 24.38px, none);
+    }
+  }
+
+  &__infos {
+    margin-bottom: 16px;
+    @include flexLayout(flex, flex-start, flex-start, 16px, column nowrap);
+  }
+
+  &__info {
+    @include flexLayout(flex, flex-start, center, 24px, row nowrap);
+
+    &-img {
+      height: 12px;
+      width: 7.5px;
+    }
+  }
+
+  &__warning {
+    margin-bottom: 36px;
+    @include flexLayout(flex, flex-start, center, 24px, row nowrap);
+
+    &-icon {
+      width: 2px;
+      height: 16px;
+    }
+
+    &-text {
+      @include headingFonts($navigation-link-color, 12px, 500, 14.63px, none);
+    }
+  }
+
+  &-text {
+    margin-bottom: 16px;
+    @include headingFonts($services-text-color, 16px, 400, 19.5px, none);
+  }
+}

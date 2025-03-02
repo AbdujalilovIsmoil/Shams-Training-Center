@@ -260,6 +260,7 @@ body {
 
 .highlight {
   padding: 56px 0px;
+  margin-bottom: 120px;
   background-color: #f5f6f9;
 }
 .highlight__content {
@@ -358,6 +359,117 @@ body {
 .highlight__contact-btn:hover {
   color: #e18a07;
   background-color: transparent;
+}
+
+.definition__container {
+  padding: 24px;
+}
+.definition-title {
+  text-align: center;
+  margin-bottom: 36px;
+  font-family: "Libre Baskerville";
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 59.52px;
+  font-weight: 700;
+  text-transform: none;
+}
+.definition-span {
+  color: #e18a07;
+}
+.definition__cards {
+  gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.definition__card {
+  max-width: 440px;
+  min-width: 440px;
+  background-color: #f1f2f5;
+}
+.definition__card-img {
+  width: 440px;
+  height: 440px;
+  object-fit: cover;
+}
+.definition__content {
+  margin-bottom: 30px;
+  gap: 0px;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.definition__content-title {
+  color: #1e1e1e;
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 500;
+  text-transform: none;
+}
+.definition__price {
+  text-align: right;
+}
+.definition__price-title {
+  margin-bottom: 8px;
+  color: #1e1e1e;
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 700;
+  text-transform: none;
+}
+.definition__price-sub-title {
+  color: #1e1e1e;
+  font-size: 20px;
+  line-height: 24.38px;
+  font-weight: 600;
+  text-transform: none;
+}
+.definition__infos {
+  margin-bottom: 16px;
+  gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+.definition__info {
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.definition__info-img {
+  height: 12px;
+  width: 7.5px;
+}
+.definition__warning {
+  margin-bottom: 36px;
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+.definition__warning-icon {
+  width: 2px;
+  height: 16px;
+}
+.definition__warning-text {
+  color: #1e1e1e;
+  font-size: 12px;
+  line-height: 14.63px;
+  font-weight: 500;
+  text-transform: none;
+}
+.definition-text {
+  margin-bottom: 16px;
+  color: #606060;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-transform: none;
 }
 
 /*# sourceMappingURL=index.css.map */
