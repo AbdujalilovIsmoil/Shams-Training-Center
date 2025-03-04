@@ -1,0 +1,82 @@
+.footer {
+  &__background {
+    padding: 40px 0px;
+    background-color: $services-background-color;
+  }
+
+  &__wrapper {
+    @include flexLayout(flex, space-between, flex-end, 0px, row nowrap);
+  }
+
+  &__box {
+    &:last-child {
+      @include flexLayout(flex, flex-end, flex-end, 32px, row nowrap);
+    }
+  }
+
+  &__small-box {
+    text-align: right;
+  }
+
+  &__bottom {
+    padding: 12px 0px;
+    background-color: $light-color;
+    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+  }
+
+  &__medias {
+    @include flexLayout(flex, flex-start, center, 12px, row nowrap);
+  }
+
+  &__media {
+    a {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1.5px solid $navigation-link-color;
+      @include flexLayout(flex, center, center, 0px, row nowrap);
+    }
+
+    &-icon {
+      width: 20px;
+      height: 20px;
+    }
+  }
+
+  &__list {
+    margin-bottom: 145px;
+    @include flexLayout(flex, flex-end, center, 20px, row nowrap);
+  }
+
+  &__item {
+    &-link {
+      transition: color 150ms linear;
+      @include headingFonts($navigation-link-color, 16px, 500, 19.5px, none);
+
+      &:hover {
+        color: $main-color;
+      }
+    }
+  }
+
+  &__telegram-contact-title {
+    @include headingFonts($navigation-link-color, 16px, 500, 19.5px, none);
+  }
+
+  &__telegram-contact-link {
+    padding: 10px;
+    margin-left: 30px;
+    border-radius: 2px;
+    display: inline-block;
+    border: 1px solid $navigation-link-color;
+    @include headingFonts($navigation-link-color, 16px, 400, 19.5px, none);
+  }
+
+  &__box {
+    &-image {
+      width: 330px;
+      height: 240px;
+      object-fit: cover;
+    }
+  }
+}
