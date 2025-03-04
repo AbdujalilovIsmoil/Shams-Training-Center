@@ -1,0 +1,65 @@
+.questions {
+  padding: 56px 0px;
+  margin-bottom: 120px;
+  background-color: $services-background-color;
+  &-title {
+    text-align: center;
+    margin-bottom: 36px;
+    font-family: "Libre Baskerville";
+    @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+  }
+
+  &-span {
+    color: $main-color;
+  }
+
+  &__container {
+    @include gridLayout(grid, 2, 36px);
+  }
+
+  &__list {
+    @include flexLayout(flex, flex-start, flex-start, 40px, column nowrap);
+  }
+
+  &__item {
+    padding-bottom: 0px;
+    border-bottom: 1.5px solid #d2d2d2;
+
+    &--reset {
+      padding-bottom: 18px;
+    }
+  }
+
+  &__box {
+    cursor: pointer;
+    padding-bottom: 20px;
+    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+    &-title {
+      @include headingFonts($navigation-link-color, 20px, 600, 24.38px, none);
+    }
+
+    &-icon {
+      width: 18px;
+      height: 18px;
+      transition: transform 300ms linear;
+
+      &--rotate {
+        transform: rotate(180deg);
+        transition: transform 300ms linear;
+      }
+    }
+  }
+
+  &__content {
+    height: 0;
+    overflow: hidden;
+    max-width: 665px;
+    min-width: 665px;
+    transition: height 300ms linear;
+
+    &--open {
+      height: 100%;
+      transition: height 300ms linear;
+    }
+  }
+}
