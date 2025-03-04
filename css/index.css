@@ -378,6 +378,7 @@ body {
   color: #e18a07;
 }
 .definition__cards {
+  margin-bottom: 120px;
   gap: 20px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -470,6 +471,31 @@ body {
   line-height: 19.5px;
   font-weight: 400;
   text-transform: none;
+}
+.definition__view {
+  gap: 16px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+.definition__view-btn {
+  width: 100%;
+  padding: 18px 0px;
+  background-color: #1e1e1e;
+  gap: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: center;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 500;
+  text-transform: none;
+}
+.definition__view-btn--orange {
+  background-color: #e18a07;
 }
 
 /*# sourceMappingURL=index.css.map */

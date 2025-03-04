@@ -15,6 +15,7 @@
   }
 
   &__cards {
+    margin-bottom: 120px;
     @include gridLayout(grid, 3, 20px);
   }
 
@@ -81,5 +82,20 @@
   &-text {
     margin-bottom: 16px;
     @include headingFonts($services-text-color, 16px, 400, 19.5px, none);
+  }
+
+  &__view {
+    @include flexLayout(flex, space-between, center, 16px, row nowrap);
+    &-btn {
+      width: 100%;
+      padding: 18px 0px;
+      background-color: $navigation-link-color;
+      @include flexLayout(flex, center, center, 0px, row nowrap);
+      @include headingFonts($light-color, 16px, 500, 19.5px, none);
+
+      &--orange {
+        background-color: $main-color;
+      }
+    }
   }
 }
