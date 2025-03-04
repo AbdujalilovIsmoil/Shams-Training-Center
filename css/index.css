@@ -56,7 +56,7 @@ body {
 
 .header {
   top: 0;
-  z-index: 1;
+  z-index: 2;
   position: sticky;
   margin-bottom: 120px;
   background-color: #ffffff;
@@ -570,6 +570,49 @@ body {
 .questions__content--open {
   height: 100%;
   transition: height 300ms linear;
+}
+
+.testimonials {
+  margin-bottom: 120px;
+}
+.testimonials-title {
+  margin: 0 auto;
+  max-width: 695px;
+  min-width: 695px;
+  text-align: center;
+  margin-bottom: 36px;
+  font-family: "Libre Baskerville";
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 59.52px;
+  font-weight: 700;
+  text-transform: none;
+}
+.testimonials-span {
+  color: #e18a07;
+}
+.testimonials__item {
+  padding: 24px;
+  max-width: 440px;
+  min-width: 440px;
+  border-radius: 2px;
+  text-align: center;
+  background-color: #f5f6f9;
+}
+.testimonials__item-title {
+  margin-bottom: 16px;
+  color: #1e1e1e;
+  font-size: 24px;
+  line-height: 29.26px;
+  font-weight: 700;
+  text-transform: none;
+}
+.testimonials__item-text {
+  color: #606060;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 500;
+  text-transform: none;
 }
 
 /*# sourceMappingURL=index.css.map */

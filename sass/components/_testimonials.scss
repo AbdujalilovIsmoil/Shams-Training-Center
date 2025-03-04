@@ -1,0 +1,33 @@
+.testimonials {
+  margin-bottom: 120px;
+  &-title {
+    margin: 0 auto;
+    max-width: 695px;
+    min-width: 695px;
+    text-align: center;
+    margin-bottom: 36px;
+    font-family: "Libre Baskerville";
+
+    @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+  }
+  &-span {
+    color: $main-color;
+  }
+
+  &__item {
+    padding: 24px;
+    max-width: 440px;
+    min-width: 440px;
+    border-radius: 2px;
+    text-align: center;
+    background-color: $services-background-color;
+    &-title {
+      margin-bottom: 16px;
+      @include headingFonts($navigation-link-color, 24px, 700, 29.26px, none);
+    }
+
+    &-text {
+      @include headingFonts($services-text-color, 16px, 500, 24px, none);
+    }
+  }
+}

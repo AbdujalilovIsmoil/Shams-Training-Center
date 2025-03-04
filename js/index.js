@@ -1,4 +1,5 @@
 "use strict";
+import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
 const init = () => {
   const createElement = (tagName, className, content) => {
@@ -53,6 +54,18 @@ const init = () => {
 
     questionsBox[i].addEventListener("click", openContent);
   }
+
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    slidesPerView: 4,
+    grabCursor: true,
+    spaceBetween: 10,
+    autoplay: {
+      delay: 5000,
+    },
+  });
+
+  swiper();
 };
 
 window.addEventListener("DOMContentLoaded", init);
