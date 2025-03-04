@@ -1,0 +1,60 @@
+.contact {
+  padding: 56px 0px;
+  margin-bottom: 120px;
+  background-color: $services-background-color;
+
+  &__container {
+    text-align: center;
+    @include flexLayout(flex, center, center, 0px, column nowrap);
+  }
+
+  &__content {
+    max-width: 450px;
+    min-width: 450px;
+    margin-bottom: 36px;
+    &-title {
+      margin-bottom: 12px;
+      font-family: "Libre Baskerville";
+      @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+    }
+
+    &-text {
+      @include headingFonts($navigation-link-color, 16px, 400, 19.5px, none);
+    }
+  }
+
+  &__form {
+    max-width: 1000px;
+    min-width: 1000px;
+    @include gridLayout(grid, 3, 16px);
+
+    &-input {
+      padding: 18px 20px;
+      @include Input(
+        $placeholderColor,
+        $placeholderColor,
+        transparent,
+        2px solid $navigation-link-color,
+        0px
+      );
+
+      @include headingFonts($navigation-link-color, 16px, 500, 19.5px, none);
+    }
+
+    &-submit {
+      transition: color 150ms linear, background-color 150ms linear;
+      @include Button($main-color, 1px solid $main-color, 2px, 18px);
+
+      @include headingFonts($light-color, 16px, 500, 19.5px, none);
+
+      &:hover {
+        color: $main-color;
+        background-color: transparent;
+      }
+    }
+  }
+
+  &__bottom {
+    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+  }
+}

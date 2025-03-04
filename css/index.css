@@ -615,4 +615,86 @@ body {
   text-transform: none;
 }
 
+.contact {
+  padding: 56px 0px;
+  margin-bottom: 120px;
+  background-color: #f5f6f9;
+}
+.contact__container {
+  text-align: center;
+  gap: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: column nowrap;
+  justify-content: center;
+}
+.contact__content {
+  max-width: 450px;
+  min-width: 450px;
+  margin-bottom: 36px;
+}
+.contact__content-title {
+  margin-bottom: 12px;
+  font-family: "Libre Baskerville";
+  color: #1e1e1e;
+  font-size: 48px;
+  line-height: 59.52px;
+  font-weight: 700;
+  text-transform: none;
+}
+.contact__content-text {
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 400;
+  text-transform: none;
+}
+.contact__form {
+  max-width: 1000px;
+  min-width: 1000px;
+  gap: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.contact__form-input {
+  padding: 18px 20px;
+  color: #acacac;
+  outline: none;
+  border: 2px solid #1e1e1e;
+  background-color: transparent;
+  border-radius: 0px;
+  color: #1e1e1e;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 500;
+  text-transform: none;
+}
+.contact__form-input::placeholder {
+  color: #acacac;
+}
+.contact__form-submit {
+  transition: color 150ms linear, background-color 150ms linear;
+  border: 1px solid #e18a07;
+  padding: 18px;
+  transition: all 300ms ease;
+  background-color: #e18a07;
+  border-radius: 2px;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 19.5px;
+  font-weight: 500;
+  text-transform: none;
+}
+.contact__form-submit:hover {
+  color: #e18a07;
+  background-color: transparent;
+}
+.contact__bottom {
+  gap: 0px;
+  display: flex;
+  align-items: center;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
 /*# sourceMappingURL=index.css.map */
