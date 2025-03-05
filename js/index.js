@@ -154,7 +154,7 @@ const init = () => {
     testimonialsList.append(element);
   }
 
-  const swiper = new Swiper(".swiper", {
+  new Swiper(".swiper", {
     loop: true,
     slidesPerView: 4,
     grabCursor: true,
@@ -163,8 +163,6 @@ const init = () => {
       delay: 5000,
     },
   });
-
-  swiper();
 };
 
 window.addEventListener("DOMContentLoaded", init);

@@ -50,8 +50,15 @@
   }
 
   &__play {
+    width: 150px;
+    height: 150px;
     cursor: pointer;
-    margin-bottom: 120px;
+    position: relative;
+    border-radius: 50%;
+    margin: 0 auto 120px auto;
+    border: 1px solid black;
+    padding: 60px 60px 60px 60px;
+
     &-icon {
       width: 30px;
       height: 30px;
