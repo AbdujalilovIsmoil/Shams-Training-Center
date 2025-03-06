@@ -185,6 +185,45 @@ const init = () => {
   intervalResult(successStudent, 70, 1);
   intervalResult(middleStudent, 1000, 10);
   intervalResult(teacher, 12, 1);
+
+  const form = document.getElementById("contact__form");
+  const userName = document.getElementById("user-name");
+  const userNumber = document.getElementById("user-number");
+
+  const sendFormData = async (e) => {
+    e.preventDefault();
+
+    const channel_id = "-1002336308190";
+    const token = "7588901644:AAG8MHMGLE46uekQbIlMTKhPRf24BH9gZ60";
+    const endpoint = "https://api.telegram.org";
+
+    try {
+      const request = await fetch(`${endpoint}/bot${token}/sendMessage`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          text: `
+        Foydalanuvchining ismi: ${userName.value}
+Foydalanuvchining raqami: ${userNumber.value}
+        `,
+          chat_id: channel_id,
+        }),
+      });
+
+      const { ok } = await request.json();
+
+      if (ok) {
+        userName.value = "";
+        userNumber.value = "";
+      }
+    } catch (error) {
+      console.error("error", error);
+    }
+  };
+
+  form.addEventListener("submit", sendFormData);
 };
 
 window.addEventListener("DOMContentLoaded", init);
