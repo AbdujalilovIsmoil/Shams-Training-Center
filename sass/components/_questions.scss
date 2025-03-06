@@ -28,6 +28,10 @@
     &--reset {
       padding-bottom: 18px;
     }
+
+    &-text {
+      @include headingFonts($services-text-color, 16px, 400, 150%, none);
+    }
   }
 
   &__box {
