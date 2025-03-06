@@ -611,6 +611,7 @@ body {
   width: 100%;
   padding: 18px 0px;
   background-color: #1e1e1e;
+  border: 2px solid #1e1e1e;
   gap: 0px;
   display: flex;
   align-items: center;
@@ -621,9 +622,18 @@ body {
   line-height: 19.5px;
   font-weight: 500;
   text-transform: none;
+  transition: color 150ms linear, background-color 150ms linear;
+}
+.definition__view-btn:hover {
+  color: #1e1e1e;
+  background-color: transparent;
 }
 .definition__view-btn--orange {
+  border: 2px solid #e18a07;
   background-color: #e18a07;
+}
+.definition__view-btn--orange:hover {
+  color: #e18a07;
 }
 
 .questions {
