@@ -22,6 +22,14 @@
     padding: 12px 0px;
     background-color: $light-color;
     @include flexLayout(flex, space-between, center, 0px, row nowrap);
+
+    &-text {
+      @include headingFonts($footer-bottom-color, 13px, 400, 100%, none);
+
+      a {
+        color: inherit;
+      }
+    }
   }
 
   &__medias {

@@ -156,6 +156,16 @@ body {
   flex-flow: row nowrap;
   justify-content: space-between;
 }
+.footer__bottom-text {
+  color: rgba(31, 31, 31, 0.6980392157);
+  font-size: 13px;
+  line-height: 100%;
+  font-weight: 400;
+  text-transform: none;
+}
+.footer__bottom-text a {
+  color: inherit;
+}
 .footer__medias {
   gap: 12px;
   display: flex;
