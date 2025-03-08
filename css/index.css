@@ -163,6 +163,14 @@ body {
   flex-flow: row nowrap;
   justify-content: flex-start;
 }
+.footer__media:hover {
+  border-radius: 50%;
+  background-color: #1e1e1e;
+  transition: background-color 150ms linear;
+}
+.footer__media:hover .footer__media-icon {
+  color: #ffffff;
+}
 .footer__media a {
   width: 40px;
   height: 40px;
@@ -175,8 +183,9 @@ body {
   justify-content: center;
 }
 .footer__media-icon {
-  width: 20px;
-  height: 20px;
+  font-size: 20px;
+  color: #1e1e1e;
+  transition: color 150ms linear;
 }
 .footer__list {
   margin-bottom: 145px;
