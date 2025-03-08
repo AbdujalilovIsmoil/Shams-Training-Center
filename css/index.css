@@ -730,21 +730,10 @@ body {
   min-width: 440px;
   border-radius: 2px;
   text-align: center;
-  transition: background-color 150ms linear;
   background-color: #f5f6f9;
-}
-.testimonials__item:hover {
-  background-color: #1e1e1e;
-}
-.testimonials__item:hover > .testimonials__item-title {
-  color: #ffffff;
-}
-.testimonials__item:hover > .testimonials__item-text {
-  color: #ffffff;
 }
 .testimonials__item-title {
   margin-bottom: 16px;
-  transition: color 150ms linear;
   color: #1e1e1e;
   font-size: 24px;
   line-height: 29.26px;
@@ -752,7 +741,6 @@ body {
   text-transform: none;
 }
 .testimonials__item-text {
-  transition: color 150ms linear;
   color: #606060;
   font-size: 16px;
   line-height: 24px;
