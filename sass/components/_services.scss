@@ -22,29 +22,14 @@
     min-width: 440px;
     text-align: center;
 
-    transition: background-color 150ms linear;
     background-color: $services-background-color;
-
-    &:hover {
-      background-color: $navigation-link-color;
-    }
-
-    &:hover > &-title {
-      color: $light-color;
-    }
-
-    &:hover > &-text {
-      color: $light-color;
-    }
 
     &-title {
       margin-bottom: 16px;
-      transition: color 150ms linear;
       @include headingFonts($navigation-link-color, 24px, 700, 29.26px, none);
     }
 
     &-text {
-      transition: color 150ms linear;
       @include headingFonts($services-text-color, 16px, 500, 24px, none);
     }
   }

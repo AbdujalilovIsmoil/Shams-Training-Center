@@ -356,21 +356,10 @@ body {
   max-width: 440px;
   min-width: 440px;
   text-align: center;
-  transition: background-color 150ms linear;
   background-color: #f5f6f9;
-}
-.services__item:hover {
-  background-color: #1e1e1e;
-}
-.services__item:hover > .services__item-title {
-  color: #ffffff;
-}
-.services__item:hover > .services__item-text {
-  color: #ffffff;
 }
 .services__item-title {
   margin-bottom: 16px;
-  transition: color 150ms linear;
   color: #1e1e1e;
   font-size: 24px;
   line-height: 29.26px;
@@ -378,7 +367,6 @@ body {
   text-transform: none;
 }
 .services__item-text {
-  transition: color 150ms linear;
   color: #606060;
   font-size: 16px;
   line-height: 24px;
