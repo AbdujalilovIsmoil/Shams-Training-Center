@@ -92,11 +92,17 @@
 
   &__telegram-contact-link {
     padding: 10px;
-    margin-left: 30px;
+    margin-left: 15px;
     border-radius: 2px;
     display: inline-block;
     border: 1px solid $navigation-link-color;
+    transition: color 150ms linear, background-color 150ms linear;
     @include headingFonts($navigation-link-color, 16px, 400, 19.5px, none);
+
+    &:hover {
+      color: $light-color;
+      background-color: $navigation-link-color;
+    }
   }
 
   &__box {
