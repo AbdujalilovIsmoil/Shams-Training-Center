@@ -16,6 +16,23 @@ const init = () => {
     return element;
   };
 
+  const showToastify = ({ text, color }) => {
+    Toastify({
+      text,
+      duration: 3000,
+      newWindow: true,
+      close: true,
+      gravity: "top",
+      position: "right",
+      stopOnFocus: true,
+      style: {
+        background: color,
+      },
+    }).showToast();
+  };
+
+  const language = "uz";
+
   const testimonials = [
     {
       id: 1,
@@ -188,10 +205,65 @@ const init = () => {
 
   const form = document.getElementById("contact__form");
   const userName = document.getElementById("user-name");
-  const userNumber = document.getElementById("user-number");
+  let userNumber = document.getElementById("user-number");
+
+  const onChangeNumberInput = (e) => {
+    if (e.key === "e" && e.code === "KeyE") {
+      e.preventDefault();
+    }
+  };
+
+  userNumber.addEventListener("keydown", onChangeNumberInput);
 
   const sendFormData = async (e) => {
     e.preventDefault();
+
+    console.log(userNumber.value.length);
+
+    if (
+      (userNumber.value.startsWith("998") ||
+        userNumber.value.startsWith("+998")) &&
+      userNumber.value.length === 12
+    ) {
+      showToastify({
+        color: "#4CAF50",
+        text: "Ma'lumotlar muvaffaqiyatli yuborildi.",
+      });
+    }
+    if (
+      (userNumber.value.startsWith("998") ||
+        userNumber.value.startsWith("+998")) &&
+      userNumber.value.length < 12
+    ) {
+      showToastify({
+        color: "#f44336",
+        text: "Telefon raqam xato kiritildi",
+      });
+    }
+    if (
+      (userNumber.value.startsWith("7") ||
+        userNumber.value.startsWith("+7") ||
+        userNumber.value.startsWith("8") ||
+        userNumber.value.startsWith("+8")) &&
+      userNumber.value.length === 11
+    ) {
+      showToastify({
+        color: "#4CAF50",
+        text: "Данные отправлены успешно.",
+      });
+    }
+    if (
+      (userNumber.value.startsWith("7") ||
+        userNumber.value.startsWith("+7") ||
+        userNumber.value.startsWith("8") ||
+        userNumber.value.startsWith("+8")) &&
+      userNumber.value.length < 10
+    ) {
+      showToastify({
+        color: "#f44336",
+        text: "Номер телефона введен неверно",
+      });
+    }
 
     const channel_id = "-1002336308190";
     const token = "7588901644:AAG8MHMGLE46uekQbIlMTKhPRf24BH9gZ60";
