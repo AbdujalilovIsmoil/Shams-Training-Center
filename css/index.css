@@ -196,6 +196,7 @@ body {
   justify-content: flex-end;
 }
 .footer__item-link {
+  position: relative;
   transition: color 150ms linear;
   color: #1e1e1e;
   font-size: 16px;
@@ -203,8 +204,21 @@ body {
   font-weight: 500;
   text-transform: none;
 }
+.footer__item-link::after {
+  left: 0;
+  width: 0%;
+  content: "";
+  height: 2px;
+  bottom: -5px;
+  position: absolute;
+  background-color: #e18a07;
+  transition: width 150ms linear;
+}
 .footer__item-link:hover {
   color: #e18a07;
+}
+.footer__item-link:hover::after {
+  width: 100%;
 }
 .footer__telegram-contact-title {
   color: #1e1e1e;

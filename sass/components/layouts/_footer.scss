@@ -61,11 +61,27 @@
 
   &__item {
     &-link {
+      position: relative;
       transition: color 150ms linear;
       @include headingFonts($navigation-link-color, 16px, 500, 19.5px, none);
 
+      &::after {
+        left: 0;
+        width: 0%;
+        content: "";
+        height: 2px;
+        bottom: -5px;
+        position: absolute;
+        background-color: $main-color;
+        transition: width 150ms linear;
+      }
+
       &:hover {
         color: $main-color;
+
+        &::after {
+          width: 100%;
+        }
       }
     }
   }
