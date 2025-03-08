@@ -1,5 +1,4 @@
 "use strict";
-import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
 
 const init = () => {
   const createElement = (tagName, className, content) => {
@@ -31,7 +30,13 @@ const init = () => {
     }).showToast();
   };
 
-  const language = "uz";
+  let language = "uz";
+
+  const successFullyData = {
+    ru: "Данные отправлены успешно.",
+    en: "The data was sent successfully.",
+    uz: "Ma'lumotlar muvaffaqiyatli yuborildi.",
+  };
 
   const testimonials = [
     {
@@ -218,53 +223,6 @@ const init = () => {
   const sendFormData = async (e) => {
     e.preventDefault();
 
-    console.log(userNumber.value.length);
-
-    if (
-      (userNumber.value.startsWith("998") ||
-        userNumber.value.startsWith("+998")) &&
-      userNumber.value.length === 12
-    ) {
-      showToastify({
-        color: "#4CAF50",
-        text: "Ma'lumotlar muvaffaqiyatli yuborildi.",
-      });
-    }
-    if (
-      (userNumber.value.startsWith("998") ||
-        userNumber.value.startsWith("+998")) &&
-      userNumber.value.length < 12
-    ) {
-      showToastify({
-        color: "#f44336",
-        text: "Telefon raqam xato kiritildi",
-      });
-    }
-    if (
-      (userNumber.value.startsWith("7") ||
-        userNumber.value.startsWith("+7") ||
-        userNumber.value.startsWith("8") ||
-        userNumber.value.startsWith("+8")) &&
-      userNumber.value.length === 11
-    ) {
-      showToastify({
-        color: "#4CAF50",
-        text: "Данные отправлены успешно.",
-      });
-    }
-    if (
-      (userNumber.value.startsWith("7") ||
-        userNumber.value.startsWith("+7") ||
-        userNumber.value.startsWith("8") ||
-        userNumber.value.startsWith("+8")) &&
-      userNumber.value.length < 10
-    ) {
-      showToastify({
-        color: "#f44336",
-        text: "Номер телефона введен неверно",
-      });
-    }
-
     const channel_id = "-1002336308190";
     const token = "7588901644:AAG8MHMGLE46uekQbIlMTKhPRf24BH9gZ60";
     const endpoint = "https://api.telegram.org";
@@ -287,6 +245,11 @@ Foydalanuvchining raqami: ${userNumber.value}
       const { ok } = await request.json();
 
       if (ok) {
+        showToastify({
+          color: "#4CAF50",
+          text: successFullyData[language],
+        });
+
         userName.value = "";
         userNumber.value = "";
       }
