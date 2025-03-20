@@ -260,15 +260,18 @@ Foydalanuvchining raqami: ${userNumber.value}
 
   form.addEventListener("submit", sendFormData);
 
-  let text = "Video Ko'rish Qo'llanma ";
-  const container = document.querySelector(".hero__play-text");
-  for (let i = 0; i < text.length; i++) {
-    let span = document.createElement("span");
-    span.innerText = text[i];
-    let angle = (360 / text.length) * i;
-    span.style.transform = `rotate(${angle}deg) translate(90px) rotate(-${angle}deg)`;
-    container.appendChild(span);
-  }
+  const text = document.querySelector(".hero__play-text");
+
+  console.log();
+
+  const newText = text.innerText
+    .split("")
+    .map((char, i) => {
+      return `<span style="transform:rotate(${i * 15}deg)">${char}</span>`;
+    })
+    .join("");
+
+  text.innerHTML = newText;
 };
 
 window.addEventListener("DOMContentLoaded", init);
