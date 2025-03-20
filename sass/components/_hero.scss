@@ -22,7 +22,7 @@
   }
 
   &__contact {
-    margin-bottom: 120px;
+    margin-bottom: 80px;
     @include flexLayout(flex, center, center, 20px, row nowrap);
     &-btn {
       padding: 18px 40px;
