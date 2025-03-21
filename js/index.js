@@ -293,6 +293,8 @@ Foydalanuvchining raqami: ${userNumber.value}
   const showIcon = (i) => {
     icons[i].children[1].classList.add("visible");
 
+    getLanguageData(icons[i].getAttribute("data-lang"));
+
     headerTopText.innerHTML = icons[i].children[0].innerHTML;
   };
 
@@ -307,6 +309,119 @@ Foydalanuvchining raqami: ${userNumber.value}
       openLanguages();
     });
   });
+
+  function getLanguageData(lang) {
+    const navLinks = document.querySelectorAll(".nav__item-link");
+    const headerContact = document.querySelector(".header-contact");
+
+    const navLinksLanguages = {
+      ru: ["O нас", "Преимущества", "Курсы", "Вопросы"],
+      en: ["Us about", "Advantages", "Courses", "Questions"],
+      arab: ["معلومات عنا", "المزايا", "الدورات", "أسئلة"],
+      uz: ["Biz haqimizda", "Avzalliklar", "Kurslar", "Savollar"],
+    };
+
+    const headerContactLanguages = {
+      en: "Contact us",
+      uz: "Biz bilan Aloqa",
+      ru: "Связаться с нами",
+      arab: "سفيزاتسيا نامي",
+    };
+
+    navLinks.forEach((el, i) => {
+      el.innerText = navLinksLanguages[lang][i];
+    });
+
+    headerContact.innerText = headerContactLanguages[lang];
+
+    const heroContentTitleLanguages = {
+      uz: `<span class="hero__content-span">
+            Shams - Quyosh
+          </span> onlayn o’quv markazi`,
+      ru: `<span class="hero__content-span">
+            Шамс – Солнце
+          </span> онлайн-центр обучения`,
+      en: `
+        <span class="hero__content-span">
+           Shams - Sun
+        </span> online study centre
+      `,
+      arab: `
+        <span class="hero__content-span">
+            شمس - شمس
+          </span> مركز التعلم عبر الإنترنت
+      `,
+    };
+
+    const heroContentTitle = document.querySelector(".hero__content-title");
+
+    heroContentTitle.innerHTML = heroContentTitleLanguages[lang];
+
+    const heroContentText = {
+      uz: `
+        Tajribali ustozlar, zamonaviy ta’lim metodlari
+        va mukammal natija kafolati – Shams o‘quv markazi sizni kutmoqda!
+      `,
+      ru: `
+        Опытные преподаватели, современные методы обучения
+        и гарантия отличного результата – учебный центр Шамс ждет вас!
+      `,
+      en: `
+        Experienced teachers, modern training methods
+        I guarantee an excellent result - the educational center Shams jdet vas!
+      `,
+      arab: `
+        معلمون ذوو خبرة، أساليب تعليمية حديثة
+        وضمان نتائج ممتازة - مركز شمس للتدريب في انتظارك!
+      `,
+    };
+
+    const heroContentTextTag = document.querySelector(".hero__content-text");
+
+    heroContentTextTag.innerText = heroContentText[lang];
+
+    const contactOrangeBtnText = {
+      uz: "Ko’proq bilish",
+      ru: "Узнать больше",
+      en: "Know more",
+      arab: "يتعلم أكثر",
+    };
+
+    const contactOrangeTag = document.querySelector(
+      ".hero__contact-btn--orange"
+    );
+
+    contactOrangeTag.innerText = contactOrangeBtnText[lang];
+
+    const contactDarkBtnText = {
+      uz: "Biz bilan Aloqa",
+      ru: "Связаться с нами",
+      en: "Contact us",
+      arab: "اتصل بنا",
+    };
+
+    const contactDarkTag = document.querySelector(".hero__contact-btn--dark");
+
+    contactDarkTag.innerText = contactDarkBtnText[lang];
+
+    const playText = {
+      uz: "Video Ko'rish Qo'llanma",
+      ru: "Руководство по просмотру видео",
+      en: "Video Watch Guide",
+      arab: "دليل مشاهدة الفيديو",
+    };
+
+    const newText = playText[lang]
+      .split("")
+      .map((char, i) => {
+        return `<span style="transform:rotate(${i * 15}deg)">${char}</span>`;
+      })
+      .join("");
+
+    text.innerHTML = newText;
+  }
+
+  getLanguageData(language);
 };
 
 window.addEventListener("DOMContentLoaded", init);
