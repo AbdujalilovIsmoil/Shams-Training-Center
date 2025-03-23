@@ -663,6 +663,164 @@ Foydalanuvchining raqami: ${userNumber.value}
     serviceItemTexts[3].innerHTML = serviceItemFourData[lang].text;
     serviceItemTitles[4].innerHTML = serviceItemFiveData[lang].title;
     serviceItemTexts[4].innerHTML = serviceItemFiveData[lang].text;
+
+    const highlightContentTitle = document.querySelector(
+      ".highlight__content-title"
+    );
+    const highlightContentText = document.querySelector(
+      ".highlight__content-text"
+    );
+
+    const highlightTitleData = {
+      uz: `
+        Sizga kerakli <span class="highlight__content-span">
+        hammasi</span> bizda bor
+      `,
+      ru: `
+        Тебе это нужно <span class="highlight__content-span">
+        все</span> у нас есть
+      `,
+      en: `
+        You need it <span class="highlight__content-span">
+        all</span> we have
+      `,
+      arab: `
+        أنت في حاجة إليها <span class="highlight__content-span">
+        الجميع</span> لدينا
+      `,
+    };
+
+    const highlightTextData = {
+      uz: `
+        Shams o‘quv markazi bilan arab tilini tez, oson va sifatli
+        o‘rganish imkoniyatini qo‘ldan boy bermang!
+      `,
+      ru: `
+        Изучите арабский язык быстро, легко и качественно с учебным центром Shams
+        не упустите шанс научиться!
+      `,
+      en: `
+        Learn Arabic quickly, easily and efficiently with Shams Learning Center
+        don't miss your chance to learn!
+      `,
+      arab: `
+        تعلم اللغة العربية بسرعة وسهولة وفعالية
+        مع مركز شمس التعليمي. لا تفوت فرصتك للتعلم!
+      `,
+    };
+
+    highlightContentTitle.innerHTML = highlightTitleData[lang];
+    highlightContentText.innerHTML = highlightTextData[lang];
+
+    const highlightTitleOneData = {
+      uz: {
+        title: "Yakka tartibda",
+        text: "Yakka tartibdagi tizimlashtirilgan sifatli oquv tizimi",
+      },
+      ru: {
+        title: "Индивидуально",
+        text: "Индивидуализированная систематизированная система качества образования",
+      },
+      en: {
+        title: "Individually",
+        text: "Individualized systematic system of quality education",
+      },
+      arab: {
+        title: "بشكل فردي",
+        text: "نظام منهجي فردي للتعليم الجيد",
+      },
+    };
+
+    const highlightTitleTwoData = {
+      uz: {
+        title: "Ayollar uchun",
+        text: "Ayollar uchun Alohida Ayol ustoz imkoniyati",
+      },
+      ru: {
+        title: "Для женщин",
+        text: "Эксклюзивная возможность наставничества для женщин",
+      },
+      en: {
+        title: "For women",
+        text: "Exclusive Mentoring Opportunity for Women",
+      },
+      arab: {
+        title: "للنساء",
+        text: "فرصة إرشاد حصرية للنساء",
+      },
+    };
+
+    const highlightTitleThreeData = {
+      uz: {
+        title: "Dars vaqti",
+        text: "Darsning vaqti sizga qulay vaqtga qarab belgilanadi",
+      },
+      ru: {
+        title: "Время занятий",
+        text: "Время занятия определяется в удобное для вас время.",
+      },
+      en: {
+        title: "Class time",
+        text: "The lesson time is determined at a time convenient for you.",
+      },
+      arab: {
+        title: "وقت الفصل",
+        text: "يتم تحديد وقت الدرس في الوقت المناسب لك.",
+      },
+    };
+
+    const highlightItemTitles = document.querySelectorAll(
+      ".highlight__item-title"
+    );
+    const highlightItemTexts = document.querySelectorAll(
+      ".highlight__item-text"
+    );
+
+    highlightItemTitles[0].innerHTML = highlightTitleOneData[lang].title;
+    highlightItemTexts[0].innerHTML = highlightTitleOneData[lang].text;
+    highlightItemTitles[1].innerHTML = highlightTitleTwoData[lang].title;
+    highlightItemTexts[1].innerHTML = highlightTitleTwoData[lang].text;
+    highlightItemTitles[2].innerHTML = highlightTitleThreeData[lang].title;
+    highlightItemTexts[2].innerHTML = highlightTitleThreeData[lang].text;
+
+    const hightlightContactData = {
+      uz: {
+        title: "Qanday savolingiz bor?",
+        text: "Bizga bog’lanib barcha savollaringizni javobini toping!",
+        btn: "Biz bilan bog’laning",
+      },
+      ru: {
+        title: "Какой у вас вопрос?",
+        text: "Свяжитесь с нами и найдите ответы на все свои вопросы!",
+        btn: "Связаться с нами",
+      },
+      en: {
+        title: "What is your question?",
+        text: "Contact us and find answers to all your questions!",
+        btn: "Contact us",
+      },
+      arab: {
+        title: "ما هو سؤالك؟",
+        text: "اتصل بنا واحصل على إجابات لجميع أسئلتك!",
+        btn: "اتصل بنا",
+      },
+    };
+
+    const hightLightContactTitle = document.querySelector(
+      ".highlight__contact-title"
+    );
+
+    const hightLightContactText = document.querySelector(
+      ".highlight__contact-text"
+    );
+
+    const hightLightContactBtn = document.querySelector(
+      ".highlight__contact-btn"
+    );
+
+    hightLightContactTitle.innerHTML = hightlightContactData[lang].title;
+    hightLightContactText.innerHTML = hightlightContactData[lang].text;
+    hightLightContactBtn.innerHTML = hightlightContactData[lang].btn;
   }
 
   getLanguageData(language);
