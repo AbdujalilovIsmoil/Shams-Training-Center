@@ -454,6 +454,215 @@ Foydalanuvchining raqami: ${userNumber.value}
     resultsItemTitles[1].innerText = resultLangTexteTwoData[lang];
     resultsItemTitles[2].innerText = resultLangTexteThreeData[lang];
     resultsItemTitles[3].innerText = resultLangTexteFourData[lang];
+
+    const serviceTitleLanguagesData = {
+      uz: `
+        Nega aynan <span class="services-span">biz?</span>
+      `,
+      ru: `
+        Почему именно <span class="services-span">мы?</span>
+      `,
+      en: `
+        Почему именно <span class="services-span">we?</span>
+      `,
+      arab: `
+        لماذا اسمي <span class="services-span">نحن؟</span>
+      `,
+    };
+
+    const serviceTitle = document.querySelector(".services-title");
+
+    serviceTitle.innerHTML = serviceTitleLanguagesData[lang];
+
+    const serviceItemOneData = {
+      uz: {
+        title: "Zamonaviy",
+        text: `
+          Interaktiv o‘quv tizimi qiziqarli va samarali qilish uchun
+          zamonaviy yondashuvdir. Darslarimiz orqali o‘quvchilar
+          gramatikani yozish, tinglash, o‘qishni rivojlantiradilar.
+        `,
+      },
+      ru: {
+        title: "Современный",
+        text: `
+          Интерактивная система обучения, чтобы сделать его интересным и эффективным
+          это современный подход. Студенты на наших уроках
+          они развивают грамматику письма, аудирования и чтения.
+        `,
+      },
+      en: {
+        title: "Modern",
+        text: `
+          Interactive learning system to make it interesting and effective
+          is a modern approach. Students in our lessons
+          they develop grammar of writing, listening and reading.
+        `,
+      },
+      arab: {
+        title: "حديث",
+        text: `
+          نظام تعليمي تفاعلي شيق وفعال، نهج حديث. في دروسنا،
+          يطور الطلاب مهاراتهم في الكتابة والاستماع والقراءة.
+        `,
+      },
+    };
+
+    const serviceItemTwoData = {
+      uz: {
+        title: "Sifat",
+        text: `
+          Tez va samarali natija - qisqa vaqt ichida Qur’on va hadislarni
+          tushunib o‘qish, shuningdek, erkin va ravon, qiynalmasdan
+          gapirish ko‘nikmalarini shakllantirish imkoniyatiga ega bo‘lasiz
+        `,
+      },
+      ru: {
+        title: "Качество",
+        text: `
+          Быстрый и эффективный результат – Коран и хадисы за короткое время
+          понимание прочитанного, а также свободно и бегло, без затруднений
+          у вас будет возможность развить разговорные навыки
+        `,
+      },
+      en: {
+        title: "Quality",
+        text: `
+          Fast and effective result - Quran and Hadith in a short time
+          reading comprehension, as well as fluency and fluency, without difficulties
+          you will have the opportunity to develop speaking skills
+        `,
+      },
+      arab: {
+        title: "جودة",
+        text: `
+          نتيجة سريعة وفعالة - القرآن الكريم
+          والحديث الشريف في وقت قصير. فهم المقروء، بالإضافة إلى طلاقة
+          وطلاقة، دون صعوبات. ستتاح لك الفرصة لتطوير مهارات التحدث.
+        `,
+      },
+    };
+
+    const serviceItemThreeData = {
+      uz: {
+        title: "Oson",
+        text: `
+          Onlayn kutubxona va Telegram bot orqali o‘quvchilarimiz o‘z
+          bilimlarini oshirishlari mumkin. Ushbu platformalar orqali
+          foydali darsliklar va qo‘llanmalar taqdim etiladi.
+        `,
+      },
+      ru: {
+        title: "Легкий",
+        text: `
+          Благодаря онлайн-библиотеке и боту Telegram наши читатели имеют свои собственные
+          они могут улучшить свои знания. Через эти платформы
+          предоставляются полезные учебники и пособия.
+        `,
+      },
+      en: {
+        title: "Easy",
+        text: `
+          Thanks to the online library and the Telegram bot, our readers have their own
+          they can improve their knowledge. Through these platforms,
+          useful textbooks and manuals are provided.
+        `,
+      },
+      arab: {
+        title: "سهل",
+        text: `
+          بفضل المكتبة الإلكترونية
+          وروبوتتيليجرام، أصبح لقرائنا منصة خاصة بهم لتطوير معارفهم.
+          ومن خلال هذه المنصات، نوفر كتبًا دراسية وأدلة مفيدة.
+        `,
+      },
+    };
+
+    const serviceItemFourData = {
+      uz: {
+        title: "E’tibor",
+        text: `
+          Islomiy til metodikasi o‘rganish jarayonini yanada samarali
+          qiladi. Bu yondashuv faqatgina gramatikani o‘rgatishga emas,
+          balki til jonli muloqot, amaliy mashg‘ulotlar orqali bo’ladi
+        `,
+      },
+      ru: {
+        title: "Внимание",
+        text: `
+          Методика исламского языка делает процесс обучения более эффективным
+          делает. Этот подход заключается не только в обучении грамматике,
+          скорее язык через живое общение и практические занятия
+        `,
+      },
+      en: {
+        title: "Attention",
+        text: `
+          The Islamic language method makes the learning process more effective
+          does. This approach is not only about teaching grammar,
+          rather the language through live communication and practical classes
+        `,
+      },
+      arab: {
+        title: "انتباه",
+        text: `
+          تُحسّن طريقة تدريس اللغة الإسلامية عملية
+          التعلم. لا يقتصر هذا النهج على تعليم القواعد فحسب، بل
+          يشمل أيضًا اللغة من خلال التواصل المباشر والدروس العملية.
+        `,
+      },
+    };
+
+    const serviceItemFiveData = {
+      uz: {
+        title: "Qulay",
+        text: `
+          Istalgan joydan toʻlovlarni oson va tez amalga oshirishingiz
+          mumkin. Sizga qulay boʻlgan har qanday qurilmadan, telefon yoki
+          kompyuterdan boʻlsin, toʻlovlarni bajarish imkoniyati
+        `,
+      },
+      ru: {
+        title: "Комфортный",
+        text: `
+          Совершайте платежи легко и быстро из любой точки мира
+          возможный С любого удобного для вас устройства, телефона или
+          возможность совершать платежи с компьютера
+        `,
+      },
+      en: {
+        title: "Comfortable",
+        text: `
+          Make payments easily and quickly from anywhere in the world
+          possible From any convenient device, phone or
+          the ability to make payments from a computer
+        `,
+      },
+      arab: {
+        title: "مريح",
+        text: `
+          قم بإجراء الدفعات بسهولة وسرعة من أي مكان في العالم
+ممكن من أي جهاز مناسب، هاتف أو                                          
+إمكانية إجراء الدفعات من جهاز كمبيوتر
+         `,
+      },
+    };
+
+    const serviceItemTitles = document.querySelectorAll(
+      ".services__item-title"
+    );
+    const serviceItemTexts = document.querySelectorAll(".services__item-text");
+
+    serviceItemTitles[0].innerHTML = serviceItemOneData[lang].title;
+    serviceItemTexts[0].innerHTML = serviceItemOneData[lang].text;
+    serviceItemTitles[1].innerHTML = serviceItemTwoData[lang].title;
+    serviceItemTexts[1].innerHTML = serviceItemTwoData[lang].text;
+    serviceItemTitles[2].innerHTML = serviceItemThreeData[lang].title;
+    serviceItemTexts[2].innerHTML = serviceItemThreeData[lang].text;
+    serviceItemTitles[3].innerHTML = serviceItemFourData[lang].title;
+    serviceItemTexts[3].innerHTML = serviceItemFourData[lang].text;
+    serviceItemTitles[4].innerHTML = serviceItemFiveData[lang].title;
+    serviceItemTexts[4].innerHTML = serviceItemFiveData[lang].text;
   }
 
   getLanguageData(language);
