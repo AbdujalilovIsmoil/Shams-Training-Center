@@ -419,6 +419,41 @@ Foydalanuvchining raqami: ${userNumber.value}
       .join("");
 
     text.innerHTML = newText;
+
+    const resultLangTexteOneData = {
+      uz: "O’qigan o’quvchilar soni",
+      ru: "Количество студентов, обучавшихся",
+      en: "Number of students enrolled",
+      arab: "عدد الطلاب المسجلين",
+    };
+
+    const resultLangTexteTwoData = {
+      uz: "C1 darajaga erishgan o’quvchillar",
+      ru: "Студенты, достигшие уровня C1",
+      en: "Students who have reached level C1",
+      arab: "الطلاب الذين وصلوا إلى المستوى C1",
+    };
+
+    const resultLangTexteThreeData = {
+      uz: "B1 Darajaga erisha olganlar",
+      ru: "Те, кто достиг уровня B1",
+      en: "Those who have reached level B1",
+      arab: "الذين وصلوا إلى المستوى B1",
+    };
+
+    const resultLangTexteFourData = {
+      uz: "Ustoz bo’lib yetishib chiqa olganlar",
+      ru: "Те, кто стал учителями",
+      en: "Those who became teachers",
+      arab: "أولئك الذين أصبحوا معلمين",
+    };
+
+    const resultsItemTitles = document.querySelectorAll(".results__item-text");
+
+    resultsItemTitles[0].innerText = resultLangTexteOneData[lang];
+    resultsItemTitles[1].innerText = resultLangTexteTwoData[lang];
+    resultsItemTitles[2].innerText = resultLangTexteThreeData[lang];
+    resultsItemTitles[3].innerText = resultLangTexteFourData[lang];
   }
 
   getLanguageData(language);
