@@ -821,6 +821,474 @@ Foydalanuvchining raqami: ${userNumber.value}
     hightLightContactTitle.innerHTML = hightlightContactData[lang].title;
     hightLightContactText.innerHTML = hightlightContactData[lang].text;
     hightLightContactBtn.innerHTML = hightlightContactData[lang].btn;
+
+    const definitionData = {
+      uz: `
+        Bizning <span class="definition-span">Tariflar</span>
+      `,
+      ru: `
+        Наш <span class="definition-span">Тарифы</span>
+      `,
+      en: `
+        Our <span class="definition-span">Tariffs</span>
+      `,
+      arab: `
+        ملكنا <span class="definition-span">التعريفات</span>
+      `,
+    };
+
+    const definitionTitle = document.querySelector(".definition-title");
+
+    definitionTitle.innerHTML = definitionData[lang];
+
+    const definitionInfoOneData = {
+      uz: {
+        dollar: "$131.07",
+        tarrifs: "Yengil tarif",
+        price: "1 700 000 so’m",
+        titles: [
+          "1 oyda 25 ta onlayn darslik",
+          "Har bir dars 40 daqiqadan bo’lib otadi",
+        ],
+        info: "Bizning markazda darslar xisoblanadi kurslar emas",
+        text: `
+          Kurs olishda ikkilanayotgan bo’lsangiz uni bepul qismini sinab
+          ko’rishingiz mumkin`,
+        video: "Videoni ko’rish",
+        contact: "Biz bilan bog’laning",
+      },
+      ru: {
+        dollar: "$131.07",
+        tarrifs: "Лайт тариф",
+        price: "1 700 000 сум",
+        titles: [
+          "25 онлайн-учебников за 1 месяц",
+          "Каждое занятие длится 40 минут",
+        ],
+        info: "В нашем центре засчитываются занятия, а не курсы",
+        text: `
+          Если вы не решаетесь пройти курс, попробуйте бесплатную часть.
+          ты можешь видеть`,
+        video: "Посмотреть видео",
+        contact: "Связаться с нами",
+      },
+      en: {
+        dollar: "$131.07",
+        tarrifs: "Light tariff",
+        price: "1 700 000 sum",
+        titles: [
+          "25 online tutorials in 1 month",
+          "Each lesson lasts 40 minutes.",
+        ],
+        info: "In our center, classes are counted, not courses.",
+        text: `
+          If you are hesitant to take the course, try the free part.
+          you can see`,
+        video: "Watch the video",
+        contact: "Contact us",
+      },
+      arab: {
+        dollar: "$131.07",
+        tarrifs: "التعرفة الخفيفة",
+        price: "1700000 سوم",
+        titles: [
+          "25 درسًا تعليميًا عبر الإنترنت في شهر واحد",
+          "كل درس يستغرق 40 دقيقة.",
+        ],
+        info: "في مركزنا يتم احتساب الفصول وليس الدورات.",
+        text: `
+          إذا كنت مترددًا في أخذ الدورة، فجرب الجزء المجاني. يمكنك أن ترى`,
+        video: "شاهد الفيديو",
+        contact: "اتصل بنا",
+      },
+    };
+
+    const definitionInfoTwoData = {
+      uz: {
+        dollar: "$177.33",
+        tarrifs: "O’rta tarif",
+        price: "2 300 000 so'm",
+        titles: [
+          "1 oyda 15 ta onlayn darslik",
+          "Har bir dars 40 daqiqadan bo’lib otadi",
+        ],
+        info: "Bizning markazda darslar xisoblanadi kurslar emas",
+        text: `
+          Kurs olishda ikkilanayotgan bo’lsangiz uni bepul qismini sinab
+          ko’rishingiz mumkin`,
+        video: "Videoni ko’rish",
+        contact: "Biz bilan bog’laning",
+      },
+      ru: {
+        dollar: "$177.33",
+        tarrifs: "Средний тариф",
+        price: "2 300 000 сум",
+        titles: [
+          "15 онлайн-учебников за 1 месяц",
+          "Каждое занятие длится 40 минут",
+        ],
+        info: "В нашем центре засчитываются занятия, а не курсы",
+        text: `
+          Если вы не решаетесь пройти курс, попробуйте бесплатную часть.
+          ты можешь видеть`,
+        video: "Посмотреть видео",
+        contact: "Связаться с нами",
+      },
+      en: {
+        dollar: "$177.33",
+        tarrifs: "Average tariff",
+        price: "1 700 000 sum",
+        titles: [
+          "15 online tutorials in 1 month",
+          "Each lesson lasts 40 minutes.",
+        ],
+        info: "In our center, classes are counted, not courses.",
+        text: `
+          If you are hesitant to take the course, try the free part.
+          you can see`,
+        video: "Watch the video",
+        contact: "Contact us",
+      },
+      arab: {
+        dollar: "$177.33",
+        tarrifs: "متوسط ​​التعريفة",
+        price: "1700000 سوم",
+        titles: [
+          "15 درسًا تعليميًا عبر الإنترنت في شهر واحد",
+          "كل درس يستغرق 40 دقيقة.",
+        ],
+        info: "في مركزنا يتم احتساب الفصول وليس الدورات.",
+        text: `
+          إذا كنت مترددًا في أخذ الدورة، فجرب الجزء المجاني. يمكنك أن ترى`,
+        video: "شاهد الفيديو",
+        contact: "اتصل بنا",
+      },
+    };
+
+    const definitionInfoThreeData = {
+      uz: {
+        dollar: "$215.88",
+        tarrifs: "Katta tarif",
+        price: "2 800 000 so'm",
+        titles: [
+          "1 oyda 25 ta onlayn darslik",
+          "Har bir dars 40 daqiqadan bo’lib otadi",
+        ],
+        info: "Bizning markazda darslar xisoblanadi kurslar emas",
+        text: `
+          Kurs olishda ikkilanayotgan bo’lsangiz uni bepul qismini sinab
+          ko’rishingiz mumkin`,
+        video: "Videoni ko’rish",
+        contact: "Biz bilan bog’laning",
+      },
+      ru: {
+        dollar: "$215.88",
+        tarrifs: "Большой тариф",
+        price: "2 800 000 сум",
+        titles: [
+          "25 онлайн-учебников за 1 месяц",
+          "Каждое занятие длится 40 минут",
+        ],
+        info: "В нашем центре засчитываются занятия, а не курсы",
+        text: `
+          Если вы не решаетесь пройти курс, попробуйте бесплатную часть.
+          ты можешь видеть`,
+        video: "Посмотреть видео",
+        contact: "Связаться с нами",
+      },
+      en: {
+        dollar: "$215.88",
+        tarrifs: "Big tariff",
+        price: "2 800 000 sum",
+        titles: [
+          "25 online tutorials in 1 month",
+          "Each lesson lasts 40 minutes.",
+        ],
+        info: "In our center, classes are counted, not courses.",
+        text: `
+          If you are hesitant to take the course, try the free part.
+          you can see`,
+        video: "Watch the video",
+        contact: "Contact us",
+      },
+      arab: {
+        dollar: "$215.88",
+        tarrifs: "تعريفة كبيرة",
+        price: "2800000 سوم",
+        titles: [
+          "25 درسًا تعليميًا عبر الإنترنت في شهر واحد",
+          "كل درس يستغرق 40 دقيقة.",
+        ],
+        info: "في مركزنا يتم احتساب الفصول وليس الدورات.",
+        text: `
+          إذا كنت مترددًا في أخذ الدورة، فجرب الجزء المجاني. يمكنك أن ترى`,
+        video: "شاهد الفيديو",
+        contact: "اتصل بنا",
+      },
+    };
+
+    const definitionContentOne = `
+      <img
+        width="440"
+        height="440"
+        alt="Yengil tarif"
+        class="definition__card-img"
+        src="./images/png/card-image-1.png"
+      />
+
+              <div class="definition__container">
+                <div class="definition__content">
+                  <h2 class="definition__content-title">${definitionInfoOneData[lang]?.tarrifs}</h2>
+
+                  <div class="definition__price">
+                    <h2 class="definition__price-title">${definitionInfoOneData[lang]?.price}</h2>
+
+                    <h3 class="definition__price-sub-title">${definitionInfoOneData[lang]?.dollar}</h3>
+                  </div>
+                </div>
+
+                <ul class="definition__infos">
+                  <li class="definition__info">
+                    <img
+                      height="12"
+                      width="7.5"
+                      alt="flag icon"
+                      src="./images/svg/flag.svg"
+                      class="definition__info-img"
+                    />
+                    <p class="definition__info-text">
+                      ${definitionInfoOneData[lang]?.titles[0]}
+                    </p>
+                  </li>
+                  <li class="definition__info">
+                    <img
+                      height="12"
+                      width="7.5"
+                      alt="flag icon"
+                      src="./images/svg/flag.svg"
+                      class="definition__info-img"
+                    />
+                    <p class="definition__info-text">
+                       ${definitionInfoOneData[lang]?.titles[1]}
+                    </p>
+                  </li>
+                </ul>
+
+                <div class="definition__warning">
+                  <img
+                    width="2"
+                    height="16"
+                    alt="exclamation icon"
+                    class="definition__warning-icon"
+                    src="./images/svg/exclamation.svg"
+                  />
+
+                  <p class="definition__warning-text">
+                    ${definitionInfoOneData[lang]?.info}
+                  </p>
+                </div>
+
+                <p class="definition-text">
+                  ${definitionInfoOneData[lang]?.text}
+                </p>
+
+                <div class="definition__view">
+                  <a
+                    role="button"
+                    target="_blank"
+                    class="definition__view-btn"
+                    href="https://www.youtube.com/@Shams_oquvmarkaz"
+                  >
+                    ${definitionInfoOneData[lang]?.video}
+                  </a>
+                  <a
+                    role="button"
+                    target="_blank"
+                    href="https://t.me/Shams_oquvmarkaz_Admin"
+                    class="definition__view-btn definition__view-btn--orange"
+                  >
+                     ${definitionInfoOneData[lang]?.contact}
+                  </a>
+                </div>
+              </div>
+    `;
+    const definitionContentTwo = `
+      <img
+        width="440"
+        height="440"
+        alt="Yengil tarif"
+        class="definition__card-img"
+        src="./images/png/card-image-2.png"
+      />
+
+              <div class="definition__container">
+                <div class="definition__content">
+                  <h2 class="definition__content-title">${definitionInfoTwoData[lang]?.tarrifs}</h2>
+
+                  <div class="definition__price">
+                    <h2 class="definition__price-title">${definitionInfoTwoData[lang]?.price}</h2>
+
+                    <h3 class="definition__price-sub-title">${definitionInfoTwoData[lang]?.dollar}</h3>
+                  </div>
+                </div>
+
+                <ul class="definition__infos">
+                  <li class="definition__info">
+                    <img
+                      height="12"
+                      width="7.5"
+                      alt="flag icon"
+                      src="./images/svg/flag.svg"
+                      class="definition__info-img"
+                    />
+                    <p class="definition__info-text">
+                      ${definitionInfoTwoData[lang]?.titles[0]}
+                    </p>
+                  </li>
+                  <li class="definition__info">
+                    <img
+                      height="12"
+                      width="7.5"
+                      alt="flag icon"
+                      src="./images/svg/flag.svg"
+                      class="definition__info-img"
+                    />
+                    <p class="definition__info-text">
+                       ${definitionInfoTwoData[lang]?.titles[1]}
+                    </p>
+                  </li>
+                </ul>
+
+                <div class="definition__warning">
+                  <img
+                    width="2"
+                    height="16"
+                    alt="exclamation icon"
+                    class="definition__warning-icon"
+                    src="./images/svg/exclamation.svg"
+                  />
+
+                  <p class="definition__warning-text">
+                    ${definitionInfoTwoData[lang]?.info}
+                  </p>
+                </div>
+
+                <p class="definition-text">
+                  ${definitionInfoTwoData[lang]?.text}
+                </p>
+
+                <div class="definition__view">
+                  <a
+                    role="button"
+                    target="_blank"
+                    class="definition__view-btn"
+                    href="https://www.youtube.com/@Shams_oquvmarkaz"
+                  >
+                    ${definitionInfoTwoData[lang]?.video}
+                  </a>
+                  <a
+                    role="button"
+                    target="_blank"
+                    href="https://t.me/Shams_oquvmarkaz_Admin"
+                    class="definition__view-btn definition__view-btn--orange"
+                  >
+                     ${definitionInfoTwoData[lang]?.contact}
+                  </a>
+                </div>
+              </div>
+    `;
+
+    const definitionContentThree = `
+      <img
+        width="440"
+        height="440"
+        alt="Yengil tarif"
+        class="definition__card-img"
+        src="./images/png/card-image-3.png"
+      />
+
+              <div class="definition__container">
+                <div class="definition__content">
+                  <h2 class="definition__content-title">${definitionInfoThreeData[lang]?.tarrifs}</h2>
+
+                  <div class="definition__price">
+                    <h2 class="definition__price-title">${definitionInfoThreeData[lang]?.price}</h2>
+
+                    <h3 class="definition__price-sub-title">${definitionInfoThreeData[lang]?.dollar}</h3>
+                  </div>
+                </div>
+
+                <ul class="definition__infos">
+                  <li class="definition__info">
+                    <img
+                      height="12"
+                      width="7.5"
+                      alt="flag icon"
+                      src="./images/svg/flag.svg"
+                      class="definition__info-img"
+                    />
+                    <p class="definition__info-text">
+                      ${definitionInfoThreeData[lang]?.titles[0]}
+                    </p>
+                  </li>
+                  <li class="definition__info">
+                    <img
+                      height="12"
+                      width="7.5"
+                      alt="flag icon"
+                      src="./images/svg/flag.svg"
+                      class="definition__info-img"
+                    />
+                    <p class="definition__info-text">
+                       ${definitionInfoThreeData[lang]?.titles[1]}
+                    </p>
+                  </li>
+                </ul>
+
+                <div class="definition__warning">
+                  <img
+                    width="2"
+                    height="16"
+                    alt="exclamation icon"
+                    class="definition__warning-icon"
+                    src="./images/svg/exclamation.svg"
+                  />
+
+                  <p class="definition__warning-text">
+                    ${definitionInfoThreeData[lang]?.info}
+                  </p>
+                </div>
+
+                <p class="definition-text">
+                  ${definitionInfoThreeData[lang]?.text}
+                </p>
+
+                <div class="definition__view">
+                  <a
+                    role="button"
+                    target="_blank"
+                    class="definition__view-btn"
+                    href="https://www.youtube.com/@Shams_oquvmarkaz"
+                  >
+                    ${definitionInfoThreeData[lang]?.video}
+                  </a>
+                  <a
+                    role="button"
+                    target="_blank"
+                    href="https://t.me/Shams_oquvmarkaz_Admin"
+                    class="definition__view-btn definition__view-btn--orange"
+                  >
+                     ${definitionInfoThreeData[lang]?.contact}
+                  </a>
+                </div>
+              </div>
+    `;
+
+    const definitionCards = document.querySelectorAll(".definition__card");
+
+    definitionCards[0].innerHTML = definitionContentOne;
+    definitionCards[1].innerHTML = definitionContentTwo;
+    definitionCards[2].innerHTML = definitionContentThree;
   }
 
   getLanguageData(language);
