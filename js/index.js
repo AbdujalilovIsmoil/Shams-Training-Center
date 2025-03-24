@@ -1289,6 +1289,477 @@ Foydalanuvchining raqami: ${userNumber.value}
     definitionCards[0].innerHTML = definitionContentOne;
     definitionCards[1].innerHTML = definitionContentTwo;
     definitionCards[2].innerHTML = definitionContentThree;
+
+    const questionsTitleData = {
+      uz: `
+        <span class="questions-span">Biz</span> Haqimizda savollar
+      `,
+      ru: `
+        <span class="questions-span">We</span> Вопросы о нас
+      `,
+      en: `
+        <span class="questions-span">We</span> Questions about us
+      `,
+      arab: `
+        <span class="questions-span">نحن</span> أسئلة عنا
+      `,
+    };
+
+    const questionsTitle = document.querySelector(".questions-title");
+
+    questionsTitle.innerHTML = questionsTitleData[lang];
+
+    const questionItemOneData = {
+      uz: {
+        title: "Shams oquv markazi qachon faoliyatni boshlagan?",
+        text: `
+          2022 yilda Shams o'quv markazi o'zining onlayn darslarini
+          yo'lga qo'ydi va hozirda 1700 ta talaba markazni
+          muvaffaqiyat bilan tamomlagan, shuningdek, 12 mingdan ortiq
+          faol kuzatuvchilari mavjud.
+        `,
+      },
+      ru: {
+        title: "Когда образовательный центр «Шамс» начал свою деятельность?",
+        text: `
+          Ю. Абдурахман, основатель образовательного центра «Шамс», арабский язык
+          окончила кафедру, 3+ года по данному направлению
+          имеет опыт. Речь идет о преподавании языка и образовательной методике.
+          имеет достаточные знания и навыки.
+        `,
+      },
+      en: {
+        title: "When did the Shams Educational Center start its activities?",
+        text: `
+          Y. Abdurakhman, founder of the educational center "Shams", Arabic language
+          graduated from the department, 3+ years in this area
+          has experience. We are talking about teaching language and educational methodology.
+          has sufficient knowledge and skills.
+        `,
+      },
+      arab: {
+        title: "متى بدأ مركز شمس التربوي نشاطه؟",
+        text: `
+          ي. عبد الرحمن، مؤسس المركز
+          التعليمي "شمس"، تخصص لغة عربية، خريج قسم اللغة العربية،
+          لديه خبرة في هذا المجال تزيد عن ثلاث سنوات. لدينا خبرة
+          في تدريس اللغة ومنهجياتها. يمتلك معرفة ومهارات كافية.
+        `,
+      },
+    };
+
+    const questionItemTwoData = {
+      uz: {
+        title: "Bu markaz asoschisi kim?",
+        text: `
+          Shams o‘quv markazining asoschisi Y. Abdurahmon Arab tili
+          yo‘nalishini tamomlagan bo‘lib, ushbu sohada 3+ yillik
+          tajribaga ega. U til o‘rgatish va ta’lim metodikasi bo‘yicha
+          yetarli bilim va malakaga ega.
+        `,
+      },
+      ru: {
+        title: "Кто основатель этого центра?",
+        text: `
+          Ю. Абдурахман, основатель образовательного центра «Шамс», арабский язык
+          окончила кафедру, 3+ года по данному направлению
+          имеет опыт. Речь идет о преподавании языка и образовательной методике.
+          имеет достаточные знания и навыки.
+        `,
+      },
+      en: {
+        title: "Who is the founder of this center?",
+        text: `
+          Y. Abdurakhman, founder of the educational center "Shams", Arabic language
+          graduated from the department, 3+ years in this area
+          has experience. We are talking about teaching language and educational methodology.
+          has sufficient knowledge and skills.
+        `,
+      },
+      arab: {
+        title: "من هو مؤسس هذا المركز؟",
+        text: `
+          ي. عبد الرحمن، مؤسس المركز التعليمي
+          "شمس"، تخصص لغة عربية، خريج قسم اللغة العربية، لديه
+          خبرة في هذا المجال تزيد عن ثلاث سنوات. لدينا خبرة في
+          تدريس اللغة ومنهجياتها. يمتلك معرفة ومهارات كافية.
+        `,
+      },
+    };
+
+    const questionItemThreeData = {
+      uz: {
+        title: "Darslar qanday tazrda otiladi?",
+        text: `
+          Darslar to‘liq onlayn shaklda o‘tiladi. Mashg‘ulotlar
+          interaktiv va zamonaviy metodlar asosida tashkil etilgan
+          bo‘lib, talabalar Zoom yoki maxsus platforma orqali
+          qatnashadilar. Dars jarayonida grammatik qoidalar, talaffuz,
+          so‘z boyligini oshirish va suhbat ko‘nikmalarini
+          rivojlantirishga alohida e’tibor qaratiladi. Shuningdek,
+          video darsliklar, yozma topshiriqlar va mustaqil o‘rganish
+          uchun qo‘shimcha materiallar ham taqdim etiladi.
+        `,
+      },
+      ru: {
+        title: "Как проводятся уроки?",
+        text: `
+          Занятия проходят полностью онлайн. Классы
+          организовано на основе интерактивных и современных методов
+          и студентов через Zoom или специальную платформу
+          они участвуют. Грамматические правила, произношение,
+          увеличить словарный запас и разговорные навыки
+          особое внимание уделяется развитию. также
+          видеоуроки, письменные задания и самостоятельное изучение
+          также предоставляются дополнительные материалы.
+        `,
+      },
+      en: {
+        title: "How are lessons conducted?",
+        text: `
+          Classes are held entirely online. Classes
+          are organized based on interactive and modern methods
+          and students via Zoom or a special platform
+          they participate. Grammar rules, pronunciation,
+          increase vocabulary and speaking skills
+          special attention is paid to the development. also
+          video lessons, written assignments and independent study
+          additional materials are also provided.
+        `,
+      },
+      arab: {
+        title: "كيف تتم الدروس؟",
+        text: `
+          تُعقد الدروس عبر الإنترنت بالكامل. تُنظّم الدروس بأساليب تفاعلية وحديثة، ويشارك
+          فيها الطلاب عبر تطبيق زووم أو منصة خاصة. يتم التركيز على قواعد
+          النحو والنطق، وتنمية مهارات التحدث والمفردات. كما تُقدّم
+          دروس فيديو، وواجبات كتابية، ودروس مستقلة، ومواد إضافية.
+        `,
+      },
+    };
+
+    const questionItemFourData = {
+      uz: {
+        title: "Cefr yoki Tanalga tayyorlaysizlarmi?",
+        text: `
+          Ha, biz CEFR va TANAL imtihonlariga tayyorlaymiz.
+          Darslarimiz maxsus imtihon talablariga moslashtirilgan
+          bo‘lib, grammatik qoidalar, tinglab tushunish, o‘qish,
+          yozish va suhbat ko‘nikmalarini rivojlantirishga
+          yo‘naltirilgan. Talabalarimiz imtihonda yuqori natijalarga
+          erishishi uchun tajribali ustozlar qo‘llanmalari, maxsus
+          testlar va amaliy mashg‘ulotlar bilan ta’minlanadi.
+        `,
+      },
+      ru: {
+        title: "Вы готовите Цефр или Танал?",
+        text: `
+          Да, мы готовимся к экзаменам CEFR и TANAL.
+          Наши уроки адаптированы к конкретным экзаменационным требованиям.
+          грамматические правила, понимание на слух, чтение,
+          развивать письменные и разговорные навыки
+          направлен. Наши студенты добиваются высоких результатов на ЕГЭ
+          руководства опытных учителей для достижения, специальные
+          обеспечены тестами и практическими занятиями.
+        `,
+      },
+      en: {
+        title: "Are you preparing Cefr or Tanal?",
+        text: `
+          Yes, we prepare for the CEFR and TANAL exams.
+          Our lessons are tailored to specific exam requirements.
+          grammar rules, listening comprehension, reading,
+          developing writing and speaking skills
+          aimed. Our students achieve high results in the Unified State Exam
+          guidance from experienced teachers to achieve, special
+          provided with tests and practical classes.
+        `,
+      },
+      arab: {
+        title: "هل تقوم بتحضير سيفر أو تنال؟",
+        text: `
+          نعم، نستعد لامتحانات الإطار الأوروبي المرجعي العام للغات (CEFR) والإطار الوطني لتعلم اللغات (TANAL).
+          دروسنا مصممة خصيصًا لتلبية متطلبات الامتحانات المحددة.
+          تشمل قواعد اللغة، وفهم الاستماع، والقراءة،
+          وتطوير مهارات الكتابة والتحدث.
+          يحقق طلابنا نتائج ممتازة في امتحان الولاية الموحد،
+          بتوجيه من معلمين ذوي خبرة لتحقيق ذلك،
+          وتوفر لهم اختبارات ودروسًا عملية.
+        `,
+      },
+    };
+
+    const questionItemFiveData = {
+      uz: {
+        title: "Men Qachon Arab Tilida Gaplasha Olaman?",
+        text: `
+          Bu sizning har kunlik mashg‘ulotingiz va amaliyotga ajratgan
+          vaqtingizga bog‘liq! Kuniga 30 daqiqa → 6 oy ichida asosiy
+          so‘z va iboralarni tushunish. Kuniga 1 soat → 3-4 oyda oddiy
+          suhbat qura olish. Kuniga 2 soat yoki ko‘proq → 2-3 oy
+          ichida erkin gapira boshlash.
+        `,
+      },
+      ru: {
+        title: "Когда я могу говорить по-арабски?",
+        text: `
+          Это ваша ежедневная тренировка и практика
+          зависит от вашего времени! 30 минут в день → базовый за 6 месяцев
+          понимать слова и фразы. 1 час в день → норма через 3-4 месяца
+          уметь поддержать разговор. 2 часа в день и более → 2-3 месяца
+          начать говорить свободно внутри себя.
+        `,
+      },
+      en: {
+        title: "When can I speak Arabic?",
+        text: `
+          This is your daily training and practice
+          depends on your time! 30 minutes a day → basic in 6 months
+          understand words and phrases. 1 hour a day → normal in 3-4 months
+          be able to maintain a conversation. 2 hours a day or more → 2-3 months
+          start speaking freely within yourself.
+        `,
+      },
+      arab: {
+        title: "متى يمكنني التحدث باللغة العربية؟",
+        text: `
+          هذا تدريبك اليومي وممارستك.
+          يعتمد على وقتك! ٣٠ دقيقة يوميًا → أساسي في ٦ أشهر
+          فهم الكلمات والعبارات. ساعة يوميًا → طبيعي في ٣-٤ أشهر
+          القدرة على مواصلة المحادثة. ساعتان يوميًا أو أكثر → شهرين إلى ثلاثة أشهر
+          البدء بالتحدث بحرية مع نفسك.
+        `,
+      },
+    };
+
+    const questionItemSixData = {
+      uz: {
+        title: "Kursni tugatgandan keyin sertifikat beriladimi?",
+        text: `
+          Ha, kursni muvaffaqiyatli tugatganlarga rasmiy sertifikat
+          taqdim etiladi.
+        `,
+      },
+      ru: {
+        title: "Есть ли сертификат после прохождения курса?",
+        text: `
+          Да, официальный сертификат об успешном прохождении курса
+          предоставляется.
+        `,
+      },
+      en: {
+        title: "Is there a certificate after completing the course?",
+        text: `
+          Yes, an official certificate of successful
+          completion of the course is provided.
+        `,
+      },
+      arab: {
+        title: "هل هناك شهادة بعد الانتهاء من الدورة؟",
+        text: `
+          نعم، يتم تقديم شهادة رسمية بإتمام الدورة بنجاح.
+         `,
+      },
+    };
+
+    const questionItemSevenData = {
+      uz: {
+        title: "Dars jadvali qanday bo‘ladi?",
+        text: `
+          Darslar turli guruhlar uchun moslashtirilgan jadval asosida
+          o‘tiladi. Shuningdek, individual ta’lim olish imkoniyati ham
+          mavjud.
+        `,
+      },
+      ru: {
+        title: "Какой будет график занятий?",
+        text: `
+          Занятия проводятся по индивидуальному графику для разных групп.
+          будет пройдено. А также возможность индивидуального обучения
+          есть.
+        `,
+      },
+      en: {
+        title: "What will be the class schedule?",
+        text: `
+          Classes are held on an individual schedule for different groups.
+          will be completed. And also the possibility of individual training
+          is.
+        `,
+      },
+      arab: {
+        title: "ما هو جدول الحصص الدراسية؟",
+        text: `
+            تُعقد الدروس وفق جدول زمني فردي لمجموعات مختلفة.
+            سيتم إكمالها. كما تتوفر إمكانية التدريب الفردي.
+        `,
+      },
+    };
+
+    const questionItemEightData = {
+      uz: {
+        title: "Nega kursingiz bunchalar qimmat?",
+        text: `
+          Bilimga sarmoya – eng foydali sarmoya! Tez va samarali
+          o‘rganing, natijani his qiling! Haqiqiy bilim arzon
+          bo‘lmaydi, lekin kelajakda ming barobar ortiq daromad
+          keltiradi! Vaqtingizni tejang, sifatli ta’lim tanlang!
+          O‘qish – xarajat emas, kelajak uchun eng yaxshi
+          investitsiya! Bugun boshlang – ertangi muvaffaqiyatingizga
+          bir qadam qo‘ying! Bilimga kiritilgan sarmoya hech qachon
+          zoye ketmaydi! Sifatli ta’lim – cheksiz imkoniyatlar kaliti!
+          Orzularingizni kechiktirmang, bugun harakatni boshlang!
+        `,
+      },
+      ru: {
+        title: "Почему ваш курс такой дорогой?",
+        text: `
+          Инвестиции в знания – самые выгодные инвестиции! Быстро и эффективно
+          учитесь, чувствуйте результат! Настоящие знания стоят дешево
+          нет, но в будущем доход в тысячу раз больше
+          приносит! Экономьте свое время, выбирайте качественное образование!
+          Образование – это не расходы, это лучшее для будущего
+          инвестиции! Начните сегодня – для завтрашнего успеха
+          сделай шаг! Инвестиции в знания никогда
+          оно не пропадет даром! Качественное образование – залог неограниченных возможностей!
+          Не откладывайте свои мечты, начните действовать уже сегодня!
+        `,
+      },
+      en: {
+        title: "Why is your course so expensive?",
+        text: `
+          Investments in knowledge are the most profitable investments! Quickly and effectively
+          learn, feel the result! Real knowledge is cheap
+          no, but in the future the income is a thousand times more
+          brings! Save your time, choose quality education!
+          Education is not an expense, it is the best for the future
+          investment! Start today - for tomorrow's success
+          take a step! Investments in knowledge will never
+          go to waste! Quality education is the key to unlimited opportunities!
+          Do not postpone your dreams, start acting today!
+        `,
+      },
+      arab: {
+        title: "لماذا دورتك مكلفة للغاية؟",
+        text: `
+          الاستثمار في المعرفة هو
+          أكثر الاستثمارات ربحية! تعلم بسرعة وفعالية، واشعر بالنتيجة!
+          المعرفة الحقيقية رخيصة، لا، لكن في المستقبل سيجلب دخلًا
+          أكبر بكثير! وفر وقتك، واختر تعليمًا عالي الجودة! التعليم ليس
+          نفقة، بل هو أفضل استثمار للمستقبل! ابدأ اليوم - لنجاح الغد،
+          انطلق! الاستثمار في المعرفة لن يضيع أبدًا! التعليم الجيد
+          هو مفتاح الفرص اللامحدودة! لا تؤجل أحلامك، ابدأ بالعمل اليوم!
+        `,
+      },
+    };
+
+    const questionItemNineData = {
+      uz: {
+        title: "Kursga qanday yozilsam bo‘ladi?",
+        text: `
+          Kursga yozilish uchun bizning rasmiy Telegram yoki
+          vebsaytimiz orqali ariza topshirishingiz mumkin. Shuningdek,
+          to‘lov amalga oshirilgach, sizga darslar uchun barcha
+          kerakli ma’lumotlar taqdim etiladi
+        `,
+      },
+      ru: {
+        title: "Как я могу зарегистрироваться на курс?",
+        text: `
+          Для регистрации на курс наш официальный Telegram или
+          Вы можете подать заявку через наш сайт. также
+          После оплаты вы получите все уроки.
+          необходимая информация предоставляется
+        `,
+      },
+      en: {
+        title: "How can I register for a course?",
+        text: `
+          To register for the course, our official Telegram or
+          You can apply through our website. also
+          After payment, you will receive all the lessons.
+          The necessary information is provided
+        `,
+      },
+      arab: {
+        title: "كيف يمكنني التسجيل في الدورة؟",
+        text: `
+          للتسجيل في
+          الدورة، تواصل معنا عبر تيليجرام أو موقعنا الإلكتروني.
+          بعد الدفع، ستصلك جميع الدروس.
+          المعلومات اللازمة متوفرة.
+        `,
+      },
+    };
+
+    const questionItemTenData = {
+      uz: {
+        title: "Men Arabchani Qayerda Ishlata Olaman?",
+        text: `
+          Saudiya yoki BAA da ishlash. Islomiy universitetlarga
+          kirish. Xalqaro tarjimon bo‘lish. Xalqaro tarjimon bo‘lish.
+          Onlayn ta’lim orqali daromad qilish. Arab tilida blog yoki
+          YouTube yuritish
+        `,
+      },
+      ru: {
+        title: "Где я могу использовать арабский язык?",
+        text: `
+          Работа в Саудовской Аравии или ОАЭ. в исламские университеты
+          доступ Станьте международным переводчиком. Станьте международным переводчиком.
+          Заработок через онлайн-обучение. Блог на арабском или
+          Запуск YouTube
+        `,
+      },
+      en: {
+        title: "Where can I use Arabic?",
+        text: `
+          Work in Saudi Arabia or UAE. in Islamic universities
+          access Become an international translator. Become an international translator.
+          Earn money through online learning. Blog in Arabic or
+          YouTube launch
+        `,
+      },
+      arab: {
+        title: "أين يمكنني استخدام اللغة العربية؟",
+        text: `
+          العمل في السعودية أو الإمارات. في الجامعات الإسلامية.
+          انضم إلى برنامج المترجمين الدوليين.
+          اربح المال من خلال التعلم عبر الإنترنت.
+          مدونة باللغة العربية أو
+          انطلق على يوتيوب.
+        `,
+      },
+    };
+
+    const questionsBoxTitles = document.querySelectorAll(
+      ".questions__box-title"
+    );
+
+    const questionsBoxTexts = document.querySelectorAll(
+      ".questions__item-text"
+    );
+
+    questionsBoxTitles[0].innerHTML = questionItemOneData[lang].title;
+    questionsBoxTexts[0].innerHTML = questionItemOneData[lang].text;
+    questionsBoxTitles[1].innerHTML = questionItemTwoData[lang].title;
+    questionsBoxTexts[1].innerHTML = questionItemTwoData[lang].text;
+    questionsBoxTitles[2].innerHTML = questionItemThreeData[lang].title;
+    questionsBoxTexts[2].innerHTML = questionItemThreeData[lang].text;
+    questionsBoxTitles[3].innerHTML = questionItemFourData[lang].title;
+    questionsBoxTexts[3].innerHTML = questionItemFourData[lang].text;
+    questionsBoxTitles[4].innerHTML = questionItemFiveData[lang].title;
+    questionsBoxTexts[4].innerHTML = questionItemFiveData[lang].text;
+    questionsBoxTitles[5].innerHTML = questionItemSixData[lang].title;
+    questionsBoxTexts[5].innerHTML = questionItemSixData[lang].text;
+    questionsBoxTitles[6].innerHTML = questionItemSevenData[lang].title;
+    questionsBoxTexts[6].innerHTML = questionItemSevenData[lang].text;
+    questionsBoxTitles[7].innerHTML = questionItemEightData[lang].title;
+    questionsBoxTexts[7].innerHTML = questionItemEightData[lang].text;
+    questionsBoxTitles[8].innerHTML = questionItemNineData[lang].title;
+    questionsBoxTexts[8].innerHTML = questionItemNineData[lang].text;
+    questionsBoxTitles[9].innerHTML = questionItemTenData[lang].title;
+    questionsBoxTexts[9].innerHTML = questionItemTenData[lang].text;
   }
 
   getLanguageData(language);
