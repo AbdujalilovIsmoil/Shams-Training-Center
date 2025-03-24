@@ -871,10 +871,12 @@ body {
 }
 .testimonials__item {
   padding: 24px;
+  overflow: auto;
   max-width: 440px;
   min-width: 440px;
   border-radius: 2px;
   text-align: center;
+  height: 215px !important;
   background-color: #f5f6f9;
 }
 .testimonials__item-title {

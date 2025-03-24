@@ -1760,6 +1760,360 @@ Foydalanuvchining raqami: ${userNumber.value}
     questionsBoxTexts[8].innerHTML = questionItemNineData[lang].text;
     questionsBoxTitles[9].innerHTML = questionItemTenData[lang].title;
     questionsBoxTexts[9].innerHTML = questionItemTenData[lang].text;
+
+    const testimonialsTitleData = {
+      uz: `
+        O’quvchilarimizni
+        <span class="testimonials-span">biz haqimizdagi</span>
+        fikrlari
+      `,
+      ru: `
+        Наши студенты
+        <span class="testimonials-span">о нас</span>
+        мысли
+      `,
+      en: `
+        Our students
+        <span class="testimonials-span">about Us</span>
+        thoughts
+      `,
+      arab: `
+        طلابنا
+        <span class="testimonials-span">معلومات عنا</span>
+        أفكار
+      `,
+    };
+
+    const testimonialsTitle = document.querySelector(".testimonials-title");
+
+    testimonialsTitle.innerHTML = testimonialsTitleData[lang];
+
+    const testimonialsOneData = {
+      uz: {
+        title: "Abdulloh M.",
+        text: `
+        Avval ko‘p joylarda arab tili o‘rganganman, lekin bu
+        markazning uslubi juda zo‘r! Juda qisqa vaqt ichida CEFR
+        imtihoniga tayyor bo‘ldim va natijam ham juda yaxshi bo‘ldi.
+        Eng yaxshi o‘quv markazlaridan biri!
+        `,
+      },
+      ru: {
+        title: "Абдулла М.",
+        text: `
+        Раньше я учил арабский язык во многих местах, но это
+        стиль хаба отличный! CEFR в очень сжатые сроки
+        Я готовился к экзамену, и мой результат был очень хорошим.
+        Один из лучших образовательных центров!
+        `,
+      },
+      en: {
+        title: "Abdullah M.",
+        text: `
+          I have studied Arabic in many places before, but this
+          hub style is great! CEFR in a very short time
+          I was preparing for the exam and my result was very good.
+          One of the best educational centers!
+        `,
+      },
+      arab: {
+        title: "عبدالله م.",
+        text: `
+          لقد درستُ اللغة العربية في أماكن عديدة سابقًا، لكن هذا المركز رائع! حصلتُ على الإطار الأوروبي المرجعي العام للغات (CEFR) في وقت قصير جدًا. كنتُ أستعد للامتحان وكانت نتيجتي ممتازة.
+          من أفضل المراكز التعليمية!
+        `,
+      },
+    };
+
+    const testimonialsTwoData = {
+      uz: {
+        title: "Xadicha S.",
+        text: `
+        Men Shams o‘quv markazida 3 oy o‘qib, arab tilida gapirishni
+        o‘rgandim. Darslar juda qiziqarli va samarali. Eng yaxshi
+        tomoni – darslarni qayta ko‘rib chiqish imkoniyati borligi.
+        Chunki bu bilan bilimni yanada mustaxkamlash mumkin!
+        `,
+      },
+      ru: {
+        title: "Хадиджа С.",
+        text: `
+        Я училась в образовательном центре Шамс 3 месяца и научилась говорить по-арабски.
+        Я узнал. Уроки очень интересные и эффективные. Лучшее
+        сторона – что есть возможность пересматривать уроки.
+        Потому что с помощью этих знаний можно еще больше укрепиться!
+        `,
+      },
+      en: {
+        title: "Khadija S.",
+        text: `
+          I studied at the Shams Educational Center for 3 months and learned to speak Arabic.
+          I learned. The lessons are very interesting and effective. The best
+          side is that there is an opportunity to review the lessons.
+          Because with the help of this knowledge you can strengthen yourself even more!
+        `,
+      },
+      arab: {
+        title: "خديجة س.",
+        text: `
+          درستُ في مركز شمس التعليمي لمدة ثلاثة أشهر، وتعلمتُ اللغة العربية.
+          تعلمتُ. الدروس شيقة وفعّالة للغاية. والأجمل من ذلك كله هو إمكانية مراجعة الدروس.
+          فبمساعدة هذه المعرفة، يمكنك تقوية نفسك أكثر!
+        `,
+      },
+    };
+
+    const testimonialsThreeData = {
+      uz: {
+        title: "Hasanbek T.",
+        text: `
+          Oldin arab tilini tushunish menga juda qiyin tuyulardi, lekin
+          Shams markazi darslari orqali qisqa vaqt ichida so‘z boyligim
+          oshdi va grammatikani tushuna boshladim. Endi ishonch bilan
+          gapira olaman!
+        `,
+      },
+      ru: {
+        title: "Хасанбек Т.",
+        text: `
+          Раньше мне было очень трудно понимать арабский, но
+          Мой словарный запас за короткое время благодаря урокам центра Шамс
+          увеличился, и я начал понимать грамматику. Теперь с уверенностью
+          я могу говорить
+        `,
+      },
+      en: {
+        title: "Hasanbek T.",
+        text: `
+          I used to have a hard time understanding Arabic, but
+          My vocabulary increased in a short time thanks to the lessons at Shams Center
+          and I started to understand the grammar. Now I can speak with confidence
+        `,
+      },
+      arab: {
+        title: "حسن بك ت.",
+        text: `
+          كنتُ أجد صعوبة في فهم
+          اللغة العربية، لكن مفرداتي ازدادت بسرعة بفضل دروس
+          مركز شمس، وبدأتُ أفهم قواعدها. الآن أستطيع التحدث بثقة.
+        `,
+      },
+    };
+
+    const testimonialsFourData = {
+      uz: {
+        title: "Zaynab A.",
+        text: `
+          O‘qitish jarayoni tushunarli va samarali. Qo‘shimcha
+          materiallar beriladi va bu darslarni yanada foydali qiladi,
+          shuning uchun har safar ulardan foydalanib bo’lgandan so’ng
+          yangi darsni kutaman!
+        `,
+      },
+      ru: {
+        title: "Зайнаб А.",
+        text: `
+          Учебный процесс понятен и эффективен. Дополнительный
+          материалы предоставляются, и это делает уроки более полезными,
+          так каждый раз после их использования
+          Жду нового урока!
+        `,
+      },
+      en: {
+        title: "Zainab A.",
+        text: `
+          The learning process is clear and effective. Additional
+          materials are provided, and this makes the lessons more useful,
+          so every time after using them
+          I look forward to a new lesson!
+        `,
+      },
+      arab: {
+        title: "زينب أ.",
+        text: `
+          عملية التعلم
+          واضحة وفعّالة. تتوفر مواد إضافية، مما يجعل الدروس أكثر
+          فائدة، لذا في كل مرة أستخدمها، أتطلع إلى درس جديد!
+        `,
+      },
+    };
+
+    const testimonialsFiveData = {
+      uz: {
+        title: "Abdulloh M.",
+        text: `
+          Avval ko‘p joylarda arab tili o‘rganganman, lekin bu
+          markazning uslubi juda zo‘r! Juda qisqa vaqt ichida CEFR
+          imtihoniga tayyor bo‘ldim va natijam ham juda yaxshi bo‘ldi.
+          Eng yaxshi o‘quv markazlaridan biri!
+        `,
+      },
+      ru: {
+        title: "Абдулла М.",
+        text: `
+          Раньше я учил арабский язык во многих местах, но это
+          стиль хаба отличный! CEFR в очень сжатые сроки
+          Я готовился к экзамену, и мой результат был очень хорошим.
+          Один из лучших образовательных центров!
+        `,
+      },
+      en: {
+        title: "Abdullah M.",
+        text: `
+          I have studied Arabic in many places before, but this
+          hub style is great! CEFR in a very short time
+          I was preparing for the exam and my result was very good.
+          One of the best educational centers!
+        `,
+      },
+      arab: {
+        title: "عبدالله م.",
+        text: `
+          لقد درستُ اللغة العربية في أماكن عديدة سابقًا، لكن هذا المركز
+          رائع! حصلتُ على الإطار الأوروبي المرجعي العام للغات (CEFR)
+          في وقت قصير جدًا. كنتُ أستعد للامتحان وكانت نتيجتي ممتازة.
+          من أفضل المراكز التع  ليمية!
+        `,
+      },
+    };
+
+    const testimonialsSixData = {
+      uz: {
+        title: "Xadicha S.",
+        text: `
+          Men Shams o‘quv markazida 3 oy o‘qib, arab tilida gapirishni
+          o‘rgandim. Darslar juda qiziqarli va samarali. Eng yaxshi
+          tomoni – darslarni qayta ko‘rib chiqish imkoniyati borligi.
+          Chunki bu bilan bilimni yanada mustaxkamlash mumkin!
+        `,
+      },
+      ru: {
+        title: "Хадиджа С.",
+        text: `
+          Я училась в образовательном центре Шамс 3 месяца и научилась говорить по-арабски.
+          Я узнал. Уроки очень интересные и эффективные. Лучшее
+          сторона – что есть возможность пересматривать уроки.
+          Потому что с помощью этих знаний можно еще больше укрепиться!
+        `,
+      },
+      en: {
+        title: "Khadija S.",
+        text: `
+          I studied at the Shams Educational Center for 3 months and learned to speak Arabic.
+          I learned. The lessons are very interesting and effective. The best
+          side is that there is an opportunity to review the lessons.
+          Because with the help of this knowledge you can strengthen yourself even more!
+        `,
+      },
+      arab: {
+        title: "خديجة س.",
+        text: `
+          درستُ في مركز شمس التعليمي لمدة ثلاثة أشهر، وتعلمتُ اللغة العربية.
+          تعلمتُ. الدروس شيقة وفعّالة للغاية. والأجمل من ذلك كله هو إمكانية مراجعة الدروس.
+          فبمساعدة هذه المعرفة، يمكنك تقوية نفسك أكثر!
+        `,
+      },
+    };
+
+    const testimonialsSevenData = {
+      uz: {
+        title: "Hasanbek T.",
+        text: `
+          Oldin arab tilini tushunish menga juda qiyin tuyulardi, lekin
+          Shams markazi darslari orqali qisqa vaqt ichida so‘z boyligim
+          oshdi va grammatikani tushuna boshladim. Endi ishonch bilan
+          gapira olaman!
+        `,
+      },
+      ru: {
+        title: "Хасанбек Т.",
+        text: `
+          Раньше мне было очень трудно понимать арабский, но
+          Мой словарный запас за короткое время благодаря урокам центра Шамс
+          увеличился, и я начал понимать грамматику. Теперь с уверенностью
+          я могу говорить
+        `,
+      },
+      en: {
+        title: "Hasanbek T.",
+        text: `
+         I used to have a hard time understanding Arabic, but
+         My vocabulary increased in a short time thanks to the lessons at Shams Center
+         and I started to understand the grammar. Now I can speak with confidence
+        `,
+      },
+      arab: {
+        title: "حسن بك ت.",
+        text: `
+          كنتُ أجد صعوبة
+          في فهم اللغة العربية، لكن مفرداتي ازدادت بسرعة بفضل دروس
+          مركز شمس، وبدأتُ أفهم قواعدها. الآن أستطيع التحدث بثقة.
+        `,
+      },
+    };
+
+    const testimonialsEightData = {
+      uz: {
+        title: "Zaynab A.",
+        text: `
+          O‘qitish jarayoni tushunarli va samarali. Qo‘shimcha
+          materiallar beriladi va bu darslarni yanada foydali qiladi,
+          shuning uchun har safar ulardan foydalanib bo’lgandan so’ng
+          yangi darsni kutaman!
+        `,
+      },
+      ru: {
+        title: "Зайнаб А.",
+        text: `
+          Учебный процесс понятен и эффективен. Дополнительный
+          материалы предоставляются, и это делает уроки более полезными,
+          так каждый раз после их использования
+          Жду нового урока!
+        `,
+      },
+      en: {
+        title: "Zainab A.",
+        text: `
+         The learning process is clear and effective. Additional
+         materials are provided, and this makes the lessons more useful,
+         so every time after using them
+         I look forward to a new lesson!
+        `,
+      },
+      arab: {
+        title: "زينب أ.",
+        text: `
+          عملية التعلم
+          واضحة وفعّالة. تتوفر مواد إضافية، مما يجعل الدروس أكثر
+          فائدة، لذا في كل مرة أستخدمها، أتطلع إلى درس جديد!
+        `,
+      },
+    };
+
+    const testimonialsItemTitles = document.querySelectorAll(
+      ".testimonials__item-title"
+    );
+
+    const testimonialsItemTexts = document.querySelectorAll(
+      ".testimonials__item-text"
+    );
+
+    testimonialsItemTitles[0].innerHTML = testimonialsOneData[lang].title;
+    testimonialsItemTexts[0].innerHTML = testimonialsOneData[lang].text;
+    testimonialsItemTitles[1].innerHTML = testimonialsTwoData[lang].title;
+    testimonialsItemTexts[1].innerHTML = testimonialsTwoData[lang].text;
+    testimonialsItemTitles[2].innerHTML = testimonialsThreeData[lang].title;
+    testimonialsItemTexts[2].innerHTML = testimonialsThreeData[lang].text;
+    testimonialsItemTitles[3].innerHTML = testimonialsFourData[lang].title;
+    testimonialsItemTexts[3].innerHTML = testimonialsFourData[lang].text;
+    testimonialsItemTitles[4].innerHTML = testimonialsFiveData[lang].title;
+    testimonialsItemTexts[4].innerHTML = testimonialsFiveData[lang].text;
+    testimonialsItemTitles[5].innerHTML = testimonialsSixData[lang].title;
+    testimonialsItemTexts[5].innerHTML = testimonialsSixData[lang].text;
+    testimonialsItemTitles[6].innerHTML = testimonialsSevenData[lang].title;
+    testimonialsItemTexts[6].innerHTML = testimonialsSevenData[lang].text;
+    testimonialsItemTitles[7].innerHTML = testimonialsEightData[lang].title;
+    testimonialsItemTexts[7].innerHTML = testimonialsEightData[lang].text;
   }
 
   getLanguageData(language);
