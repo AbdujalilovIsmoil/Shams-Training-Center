@@ -2114,6 +2114,137 @@ Foydalanuvchining raqami: ${userNumber.value}
     testimonialsItemTexts[6].innerHTML = testimonialsSevenData[lang].text;
     testimonialsItemTitles[7].innerHTML = testimonialsEightData[lang].title;
     testimonialsItemTexts[7].innerHTML = testimonialsEightData[lang].text;
+
+    const contactTitleData = {
+      uz: "Ariza qoldiring",
+      ru: "Подать заявку",
+      en: "Submit an application",
+      arab: "تقديم الطلب",
+    };
+
+    const contactTextData = {
+      uz: `
+        Ariza qoldiring, biz esa siz bilan tezkor aloqaga chiqib, o‘quv
+        jarayoni, dars jadvali va ta’lim metodikamiz haqida batafsil
+        ma’lumot beramiz!
+      `,
+      ru: `
+        Оставьте заявку и мы быстро свяжемся с вами
+        Подробности о нашем процессе, расписании занятий и методике обучения
+        мы сообщим вам!
+      `,
+      en: `
+        Leave a request and we will contact you quickly
+        We will inform you about the details of our process,
+        class schedule and teaching methods!
+      `,
+      arab: `
+        اترك طلبًا وسنتواصل معك بسرعة.
+        سنُطلعك على تفاصيل عملية التسجيل، وجدول الحصص، وطرق التدريس!
+      `,
+    };
+
+    const contactContentTitle = document.querySelector(
+      ".contact__content-title"
+    );
+
+    const contactContentText = document.querySelector(".contact__content-text");
+
+    contactContentTitle.innerHTML = contactTitleData[lang];
+    contactContentText.innerHTML = contactTextData[lang];
+
+    const contactInputs = document.querySelectorAll(".contact__form-input");
+    const contactSubmit = document.querySelector(".contact__form-submit");
+
+    const contactOneInputData = {
+      uz: "Ismingizni kiriting",
+      en: "Enter your name",
+      ru: "Введите свое имя",
+      arab: "أدخل اسمك",
+    };
+
+    const contactTwoInputData = {
+      uz: "Raqamingizni yozing",
+      en: "Write your phone number",
+      ru: "Напишите свой номер",
+      arab: "اكتب رقم هاتفك",
+    };
+
+    const contactBtnData = {
+      uz: "Yuborish",
+      ru: "Отправка",
+      en: "Send",
+      arab: "يرسل",
+    };
+
+    contactInputs[0].setAttribute("placeholder", contactOneInputData[lang]);
+    contactInputs[1].setAttribute("placeholder", contactTwoInputData[lang]);
+    contactSubmit.innerHTML = contactBtnData[lang];
+
+    const footerItemLinks = document.querySelectorAll(".footer__item-link");
+
+    const footerItemLinksData = {
+      uz: ["Biz haqimizda", "Avzalliklar", "Kurslar", "Savollar"],
+      ru: ["O нас", "Преимущества", "Курсы", "Вопросы"],
+      en: ["About us", "Advantages", "Courses", "Questions"],
+      arab: ["معلومات عنا", "المزايا", "الدورات", "أسئلة"],
+    };
+
+    footerItemLinks[0].innerHTML = footerItemLinksData[lang][0];
+    footerItemLinks[1].innerHTML = footerItemLinksData[lang][1];
+    footerItemLinks[2].innerHTML = footerItemLinksData[lang][2];
+    footerItemLinks[3].innerHTML = footerItemLinksData[lang][3];
+
+    const contactTitles = {
+      uz: "Aloqa Ma’lumotlari:",
+      ru: "Контактная информация:",
+      en: "Contact information:",
+      arab: "معلومات الاتصال:",
+    };
+
+    const footerTelegramContactTitle = document.querySelector(
+      ".footer__telegram-contact-title"
+    );
+
+    footerTelegramContactTitle.innerHTML = `
+    ${contactTitles[lang]}
+      <a
+        target="_blank"
+        class="footer__telegram-contact-link"
+        href="https://t.me/Shams_oquvmarkaz_Admin"
+      >
+        @Shams_oquvmarkaz_Admin
+      </a>
+    `;
+
+    const footerBottomTextsData = {
+      uz: [
+        "©2025 Barcha huquqlar himoyalangan",
+        "Maxfiylik siyosati",
+        "Tez-tez beriladigan savollar",
+      ],
+      ru: [
+        "«©2025 Все права защищены»",
+        "Политика конфиденциальности",
+        "«Часто задаваемые вопросы»",
+      ],
+      en: [
+        "«©2025 All rights reserved»",
+        "Privacy Policy",
+        "«Frequently Asked Questions»",
+      ],
+      arab: [
+        "«©2025 جميع الحقوق محفوظة»»،",
+        "«سياسة الخصوصية»،",
+        "«الأسئلة الشائعة»»،",
+      ],
+    };
+
+    const footerBottomTexts = document.querySelectorAll(".footer__bottom-text");
+
+    footerBottomTexts[0].innerHTML = footerBottomTextsData[lang][0];
+    footerBottomTexts[1].innerHTML = footerBottomTextsData[lang][1];
+    footerBottomTexts[2].innerHTML = footerBottomTextsData[lang][2];
   }
 
   getLanguageData(language);
