@@ -4,7 +4,7 @@
 ✨ Features
 🏫 About Shams – Learn about the educational center
 
-🌎 Multi-language support – Uzbek 🇺🇿, Russian 🇷🇺, English 🇬🇧, and Arabic 🇸🇦
+🌎 Multi-language support – Uzbek 🇺🇿, Russian 🇷🇺, English 🇬🇧 and Arabic 🇸🇦
 
 🎓 Student Success – 1,700+ graduates 🧑‍🎓
 
@@ -12,7 +12,8 @@
 
 🎨 Modern & Responsive Design
 
-🛠 Technologies Used
+🛠 Technologies Used:
+
 HTML 📄
 
 SASS 🎨
