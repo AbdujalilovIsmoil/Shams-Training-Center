@@ -1,4 +1,10 @@
+
+
 .nav {
+  @include defaultMediaQuery(1200px) {
+    display: none;
+  }
+
   &__list {
     max-width: 540px;
     min-width: 540px;

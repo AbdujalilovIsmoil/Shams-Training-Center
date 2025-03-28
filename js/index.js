@@ -332,7 +332,7 @@ Foydalanuvchining raqami: ${userNumber.value}
       el.innerText = navLinksLanguages[lang][i];
     });
 
-    headerContact.innerText = headerContactLanguages[lang];
+    headerContact.inner = headerContactLanguages[lang];
 
     const heroContentTitleLanguages = {
       uz: `<span class="hero__content-span">
