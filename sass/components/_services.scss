@@ -1,9 +1,23 @@
 .services {
   margin-bottom: 120px;
+
+  @include md {
+    margin-bottom: 60px;
+  }
+
   &-title {
     text-align: center;
     margin-bottom: 36px;
     font-family: "Libre Baskerville";
+
+    @include md {
+      font-size: 35px;
+      margin-bottom: 28px;
+    }
+
+    @include sm {
+      margin-bottom: 20px;
+    }
 
     @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
   }
@@ -24,13 +38,27 @@
 
     background-color: $services-background-color;
 
+    @include sm {
+      padding: 20px;
+      min-width: 0px;
+    }
+
     &-title {
       margin-bottom: 16px;
       @include headingFonts($navigation-link-color, 24px, 700, 29.26px, none);
+
+      @include sm {
+        font-size: 22px;
+        margin-bottom: 14px;
+      }
     }
 
     &-text {
       @include headingFonts($services-text-color, 16px, 500, 24px, none);
+
+      @include sm {
+        font-size: 14px;
+      }
     }
   }
 }

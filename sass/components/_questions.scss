@@ -7,6 +7,8 @@
     margin-bottom: 36px;
     font-family: "Libre Baskerville";
     @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+  
+   
   }
 
   &-span {
