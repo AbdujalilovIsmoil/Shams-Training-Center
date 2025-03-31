@@ -1,6 +1,14 @@
 .definition {
   &__container {
     padding: 24px;
+
+    @include defaultMediaQuery(860px) {
+      padding: 18px;
+    }
+
+    @include sm {
+      padding: 14px;
+    }
   }
 
   &-title {
@@ -8,6 +16,19 @@
     margin-bottom: 36px;
     font-family: "Libre Baskerville";
     @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+
+    @include defaultMediaQuery(860px) {
+      font-size: 40px;
+    }
+
+    @include md {
+      font-size: 36px;
+    }
+
+    @include sm {
+      font-size: 34px;
+      margin-bottom: 30px;
+    }
   }
 
   &-span {
@@ -17,17 +38,35 @@
   &__cards {
     margin-bottom: 120px;
     @include gridLayout(grid, 3, 20px);
+
+    @include defaultMediaQuery(1300px) {
+      @include gridLayout(grid, 2, 20px);
+    }
+
+    @include md {
+      @include gridLayout(grid, 1, 20px);
+    }
   }
 
   &__card {
-    max-width: 440px;
-    min-width: 440px;
     background-color: $card-background-color;
 
     &-img {
-      width: 440px;
+      width: 100%;
       height: 440px;
       object-fit: cover;
+
+      @include defaultMediaQuery(940px) {
+        height: 400px;
+      }
+
+      @include md {
+        height: 360px;
+      }
+
+      @include sm {
+        height: 250px;
+      }
     }
   }
 
@@ -37,18 +76,31 @@
 
     &-title {
       @include headingFonts($navigation-link-color, 24px, 500, 29.26px, none);
+
+      @include defaultMediaQuery(860px) {
+        font-size: 20px;
+      }
     }
   }
 
   &__price {
     text-align: right;
+
     &-title {
       margin-bottom: 8px;
       @include headingFonts($navigation-link-color, 24px, 700, 29.26px, none);
+
+      @include defaultMediaQuery(860px) {
+        font-size: 20px;
+      }
     }
 
     &-sub-title {
       @include headingFonts($navigation-link-color, 20px, 600, 24.38px, none);
+
+      @include defaultMediaQuery(860px) {
+        font-size: 18px;
+      }
     }
   }
 
@@ -64,6 +116,14 @@
       height: 12px;
       width: 7.5px;
     }
+
+    &-text {
+      @include headingFonts($navbar-background-color, 16px, 500, 0%, none);
+
+      @include defaultMediaQuery(860px) {
+        font-size: 14px;
+      }
+    }
   }
 
   &__warning {
@@ -77,24 +137,42 @@
 
     &-text {
       @include headingFonts($navigation-link-color, 12px, 500, 14.63px, none);
+
+      @include defaultMediaQuery(860px) {
+      }
     }
   }
 
   &-text {
     margin-bottom: 16px;
     @include headingFonts($services-text-color, 16px, 400, 19.5px, none);
+
+    @include defaultMediaQuery(860px) {
+      font-size: 14px;
+    }
   }
 
   &__view {
     @include flexLayout(flex, space-between, center, 16px, row nowrap);
+
+    @include defaultMediaQuery(860px) {
+      gap: 8px;
+    }
+
     &-btn {
       width: 100%;
-      padding: 18px 0px;
+      padding: 18px 9px;
+      text-wrap: nowrap;
       background-color: $navigation-link-color;
       border: 2px solid $navigation-link-color;
       @include flexLayout(flex, center, center, 0px, row nowrap);
       @include headingFonts($light-color, 16px, 500, 19.5px, none);
       transition: color 150ms linear, background-color 150ms linear;
+
+      @include defaultMediaQuery(940px) {
+        font-size: 14px;
+        padding: 14px 7px;
+      }
 
       &:hover {
         color: $navigation-link-color;
