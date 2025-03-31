@@ -120,6 +120,7 @@ footer {
   }
 }
 .navbar__list {
+  margin-bottom: 0px;
   gap: 12px;
   display: flex;
   align-items: flex-start;
@@ -129,7 +130,7 @@ footer {
 .navbar__item-link {
   padding: 10px 20px;
   display: inline-block;
-  background-color: #D2D2D2;
+  background-color: #d2d2d2;
   transition: color 150ms linear, background-color 150ms linear;
   color: #1e1e1e;
   font-size: 12px;
@@ -140,6 +141,10 @@ footer {
 .navbar__item-link:hover {
   color: #ffffff;
   background-color: #e18a07;
+}
+.navbar__item:last-child a {
+  color: #ffffff;
+  background-color: #1e1e1e;
 }
 
 .header {

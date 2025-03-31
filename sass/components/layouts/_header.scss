@@ -38,6 +38,7 @@
   }
 
   &__list {
+    margin-bottom: 0px;
     @include flexLayout(flex, flex-start, flex-start, 12px, column nowrap);
   }
 
@@ -58,6 +59,13 @@
       &:hover {
         color: $light-color;
         background-color: $main-color;
+      }
+    }
+
+    &:last-child {
+      a {
+        color: $light-color;
+        background-color: $navigation-link-color;
       }
     }
   }
