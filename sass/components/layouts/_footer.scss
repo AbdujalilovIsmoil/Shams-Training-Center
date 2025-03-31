@@ -1,5 +1,5 @@
 .footer {
-  display: none;
+  min-height: 360px;
   &__background {
     height: 100%;
     padding: 40px 0px;
@@ -7,26 +7,32 @@
   }
 
   &__wrapper {
-    @include flexLayout(flex, space-between, flex-start, 0px, row nowrap);
+    @include flexLayout(flex, space-between, space-between, 0px, row nowrap);
   }
 
-  &__box {
-    &:first-child {
-      height: 100%;
-      @include flexLayout(flex, space-between, flex-start, 0px, column nowrap);
-    }
-
-    &-logo {
-      height: 60px;
-    }
-
-    &:last-child {
-      @include flexLayout(flex, flex-end, flex-end, 32px, row nowrap);
-    }
+  &__small-box-container {
+    @include flexLayout(flex, space-between, flex-end, 0px, column nowrap);
   }
 
   &__small-box {
-    text-align: right;
+    &:first-child {
+      padding-top: 30px;
+    }
+  }
+
+  &__box {
+    &-logo {
+      height: 60px;
+      width: 125px;
+    }
+
+    &:first-child {
+      @include flexLayout(flex, space-between, center, 0px, column nowrap);
+    }
+
+    &:last-child {
+      @include flexLayout(flex, space-between, space-between, 40px, row nowrap);
+    }
   }
 
   &__bottom {
@@ -44,7 +50,7 @@
   }
 
   &__medias {
-    @include flexLayout(flex, flex-start, center, 12px, row nowrap);
+    @include flexLayout(flex, flex-end, center, 12px, row nowrap);
   }
 
   &__media {
@@ -74,8 +80,7 @@
   }
 
   &__list {
-    margin-bottom: 145px;
-    @include flexLayout(flex, flex-end, center, 20px, row nowrap);
+    @include flexLayout(flex, flex-start, center, 20px, row nowrap);
   }
 
   &__item {
