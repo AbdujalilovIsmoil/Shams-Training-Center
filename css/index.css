@@ -79,6 +79,10 @@ section:nth-child(7) {
   display: block;
 }
 
+section:nth-child(8) {
+  display: block;
+}
+
 footer {
   display: none;
 }
@@ -1565,6 +1569,12 @@ footer {
   margin-bottom: 120px;
   background-color: #f5f6f9;
 }
+@media only screen and (max-width: 768px) {
+  .contact {
+    padding: 28px 0px;
+    margin-bottom: 60px;
+  }
+}
 .contact__container {
   text-align: center;
   gap: 0px;
@@ -1578,6 +1588,11 @@ footer {
   min-width: 450px;
   margin-bottom: 36px;
 }
+@media only screen and (max-width: 576px) {
+  .contact__content {
+    min-width: 0px;
+  }
+}
 .contact__content-title {
   margin-bottom: 12px;
   font-family: "Libre Baskerville";
@@ -1587,6 +1602,17 @@ footer {
   font-weight: 700;
   text-transform: none;
 }
+@media only screen and (max-width: 768px) {
+  .contact__content-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .contact__content-title {
+    font-size: 25px;
+  }
+}
 .contact__content-text {
   color: #1e1e1e;
   font-size: 16px;
@@ -1594,12 +1620,36 @@ footer {
   font-weight: 400;
   text-transform: none;
 }
+@media only screen and (max-width: 768px) {
+  .contact__content-text {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .contact__content-text {
+    font-size: 12px;
+  }
+}
 .contact__form {
+  min-width: 100%;
   max-width: 1000px;
-  min-width: 1000px;
   gap: 16px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+}
+@media only screen and (max-width: 1000px) {
+  .contact__form {
+    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media only screen and (max-width: 576px) {
+  .contact__form {
+    gap: 16px;
+    display: grid;
+    grid-template-columns: 1fr;
+  }
 }
 .contact__form-input {
   padding: 18px 20px;
@@ -1617,6 +1667,12 @@ footer {
 .contact__form-input::placeholder {
   color: #acacac;
 }
+@media only screen and (max-width: 576px) {
+  .contact__form-input {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
 .contact__form-submit {
   transition: color 150ms linear, background-color 150ms linear;
   border: 1px solid #e18a07;
@@ -1633,6 +1689,11 @@ footer {
 .contact__form-submit:hover {
   color: #e18a07;
   background-color: transparent;
+}
+@media only screen and (max-width: 576px) {
+  .contact__form-submit {
+    font-size: 14px;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

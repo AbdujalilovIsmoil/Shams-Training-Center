@@ -3,6 +3,11 @@
   margin-bottom: 120px;
   background-color: $services-background-color;
 
+  @include md {
+    padding: 28px 0px;
+    margin-bottom: 60px;
+  }
+
   &__container {
     text-align: center;
     @include flexLayout(flex, center, center, 0px, column nowrap);
@@ -12,21 +17,51 @@
     max-width: 450px;
     min-width: 450px;
     margin-bottom: 36px;
+
+    @include sm {
+      min-width: 0px;
+    }
+
     &-title {
       margin-bottom: 12px;
       font-family: "Libre Baskerville";
       @include headingFonts($navigation-link-color, 48px, 700, 59.52px, none);
+
+      @include md {
+        font-size: 40px;
+        line-height: 50px;
+      }
+
+      @include sm {
+        font-size: 25px;
+      }
     }
 
     &-text {
       @include headingFonts($navigation-link-color, 16px, 400, 19.5px, none);
+
+      @include md {
+        font-size: 14px;
+      }
+
+      @include sm {
+        font-size: 12px;
+      }
     }
   }
 
   &__form {
+    min-width: 100%;
     max-width: 1000px;
-    min-width: 1000px;
     @include gridLayout(grid, 3, 16px);
+
+    @include defaultMediaQuery(1000px) {
+      @include gridLayout(grid, 2, 16px);
+    }
+
+    @include sm {
+      @include gridLayout(grid, 1, 16px);
+    }
 
     &-input {
       padding: 18px 20px;
@@ -39,6 +74,11 @@
       );
 
       @include headingFonts($navigation-link-color, 16px, 500, 19.5px, none);
+
+      @include sm {
+        padding: 14px;
+        font-size: 14px;
+      }
     }
 
     &-submit {
@@ -50,6 +90,10 @@
       &:hover {
         color: $main-color;
         background-color: transparent;
+      }
+
+      @include sm {
+        font-size: 14px;
       }
     }
   }
