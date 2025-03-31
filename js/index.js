@@ -30,7 +30,7 @@ const init = () => {
     }).showToast();
   };
 
-  let language = "uz";
+  let language = localStorage.getItem("lang") || "uz";
 
   const successFullyData = {
     ru: "Данные отправлены успешно.",
@@ -305,13 +305,27 @@ Foydalanuvchining raqami: ${userNumber.value}
   const showIcon = (i) => {
     icons[i].children[1].classList.add("visible");
 
+    localStorage.setItem("lang", icons[i].getAttribute("data-lang"));
+
     getLanguageData(icons[i].getAttribute("data-lang"));
 
     headerTopText.innerHTML = icons[i].children[0].innerHTML;
   };
 
+  const returnLang = (lang) => {
+    if (lang === "uz") {
+      return 0;
+    } else if (lang === "en") {
+      return 1;
+    } else if (lang === "ru") {
+      return 2;
+    } else {
+      return 3;
+    }
+  };
+
   hideIcon();
-  showIcon(0);
+  showIcon(returnLang(language));
 
   icons.forEach((el, i) => {
     el.addEventListener("click", (e) => {
@@ -2257,6 +2271,21 @@ Foydalanuvchining raqami: ${userNumber.value}
     footerBottomTexts[0].innerHTML = footerBottomTextsData[lang][0];
     footerBottomTexts[1].innerHTML = footerBottomTextsData[lang][1];
     footerBottomTexts[2].innerHTML = footerBottomTextsData[lang][2];
+
+    const navbarItemLinks = document.querySelectorAll(".navbar__item-link");
+
+    const navbarLinksLanguages = {
+      arab: ["معلومات عنا", "المزايا", "الدورات", "أسئلة", "اتصال"],
+      ru: ["O нас", "Преимущества", "Курсы", "Вопросы", "Контакт"],
+      en: ["Us about", "Advantages", "Courses", "Questions", "Contact"],
+      uz: ["Biz haqimizda", "Avzalliklar", "Kurslar", "Savollar", "Aloqa"],
+    };
+
+    navbarItemLinks[0].innerHTML = navbarLinksLanguages[lang][0];
+    navbarItemLinks[1].innerHTML = navbarLinksLanguages[lang][1];
+    navbarItemLinks[2].innerHTML = navbarLinksLanguages[lang][2];
+    navbarItemLinks[3].innerHTML = navbarLinksLanguages[lang][3];
+    navbarItemLinks[4].innerHTML = navbarLinksLanguages[lang][4];
   }
 
   getLanguageData(language);
