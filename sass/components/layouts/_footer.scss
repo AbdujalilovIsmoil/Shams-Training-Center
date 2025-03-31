@@ -1,5 +1,6 @@
 .footer {
   min-height: 360px;
+
   &__background {
     height: 100%;
     padding: 40px 0px;
@@ -7,16 +8,34 @@
   }
 
   &__wrapper {
-    @include flexLayout(flex, space-between, space-between, 0px, row nowrap);
+    @include flexLayout(flex, space-between, space-between, 20px, row nowrap);
+
+    @include defaultMediaQuery(1035px) {
+      @include flexLayout(
+        flex,
+        space-between,
+        space-between,
+        20px,
+        column nowrap
+      );
+    }
   }
 
   &__small-box-container {
-    @include flexLayout(flex, space-between, flex-end, 0px, column nowrap);
+    @include flexLayout(flex, space-between, flex-end, 25px, column nowrap);
+
+    @include defaultMediaQuery(1035px) {
+      @include flexLayout(flex, space-between, flex-start, 25px, column nowrap);
+    }
   }
 
   &__small-box {
     &:first-child {
       padding-top: 30px;
+
+      @include defaultMediaQuery(950px) {
+        padding-top: 0px;
+      }
     }
   }
 
@@ -28,17 +47,35 @@
 
     &:first-child {
       @include flexLayout(flex, space-between, center, 0px, column nowrap);
+
+      @include defaultMediaQuery(1035px) {
+        @include flexLayout(flex, space-between, center, 0px, row nowrap);
+      }
     }
 
     &:last-child {
       @include flexLayout(flex, space-between, space-between, 40px, row nowrap);
+
+      @include defaultMediaQuery(950px) {
+        @include flexLayout(
+          flex,
+          space-between,
+          space-between,
+          20px,
+          column-reverse nowrap
+        );
+      }
     }
   }
 
   &__bottom {
     padding: 12px 0px;
     background-color: $light-color;
-    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+    @include flexLayout(flex, space-between, center, 15px, row nowrap);
+
+    @include defaultMediaQuery(650px) {
+      @include flexLayout(flex, space-between, flex-start, 15px, column nowrap);
+    }
 
     &-text {
       @include headingFonts($footer-bottom-color, 13px, 400, 100%, none);
@@ -81,6 +118,10 @@
 
   &__list {
     @include flexLayout(flex, flex-start, center, 20px, row nowrap);
+
+    @include defaultMediaQuery(950px) {
+      @include flexLayout(flex, flex-start, flex-start, 20px, column nowrap);
+    }
   }
 
   &__item {
@@ -88,6 +129,10 @@
       position: relative;
       transition: color 150ms linear;
       @include headingFonts($navigation-link-color, 16px, 500, 19.5px, none);
+
+      @include md {
+        font-size: 14px;
+      }
 
       &::after {
         left: 0;
@@ -112,6 +157,10 @@
 
   &__telegram-contact-title {
     @include headingFonts($navigation-link-color, 16px, 500, 19.5px, none);
+
+    @include md {
+      font-size: 14px;
+    }
   }
 
   &__telegram-contact-link {
@@ -122,6 +171,15 @@
     border: 1px solid $navigation-link-color;
     transition: color 150ms linear, background-color 150ms linear;
     @include headingFonts($navigation-link-color, 16px, 400, 19.5px, none);
+
+    @include md {
+      padding: 5px;
+      font-size: 14px;
+    }
+
+    @include sm {
+      margin-top: 10px;
+    }
 
     &:hover {
       color: $light-color;
@@ -134,6 +192,10 @@
       width: 330px;
       height: 240px;
       object-fit: cover;
+
+      @include defaultMediaQuery(950px) {
+        width: 100%;
+      }
     }
   }
 }
