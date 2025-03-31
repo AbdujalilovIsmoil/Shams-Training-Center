@@ -2,21 +2,54 @@
   padding: 36px 0px;
   margin-bottom: 120px;
   background-color: $navigation-link-color;
+
+  @include md {
+    margin-bottom: 60px;
+  }
+
   &__list {
-    @include flexLayout(flex, space-between, center, 0px, row nowrap);
+    @include gridLayout(grid, 4, 50px);
+
+    @include defaultMediaQuery(1200px) {
+      @include gridLayout(grid, 2, 50px);
+    }
+
+    @include md {
+      gap: 35px;
+    }
+
+    @include sm {
+      gap: 20px;
+    }
   }
 
   &__item {
-    max-width: 210px;
-    min-width: 210px;
     text-align: center;
     &-title {
       margin-bottom: 12px;
       @include headingFonts($light-color, 50px, 600, 60.95px, none);
+
+      @include md {
+        font-size: 35px;
+        line-height: 40px;
+      }
+
+      @include sm {
+        font-size: 28px;
+        margin-bottom: 5px;
+      }
     }
 
     &-text {
       @include headingFonts($light-color, 20px, 500, 24.38px, none);
+
+      @include md {
+        font-size: 18px;
+      }
+
+      @include sm {
+        font-size: 14px;
+      }
     }
   }
 }
