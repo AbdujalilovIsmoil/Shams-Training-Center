@@ -1,14 +1,26 @@
 .footer {
   &__background {
+    height: 100%;
     padding: 40px 0px;
     background-color: $services-background-color;
   }
 
   &__wrapper {
-    @include flexLayout(flex, space-between, flex-end, 0px, row nowrap);
+    position: relative;
+
+    @include flexLayout(flex, space-between, flex-start, 0px, row nowrap);
   }
 
   &__box {
+    &:first-child {
+      height: 100%;
+      @include flexLayout(flex, space-between, flex-start, 0px, column nowrap);
+    }
+
+    &-logo {
+      height: 60px;
+    }
+
     &:last-child {
       @include flexLayout(flex, flex-end, flex-end, 32px, row nowrap);
     }
@@ -33,6 +45,8 @@
   }
 
   &__medias {
+    position: absolute;
+    bottom: 0;
     @include flexLayout(flex, flex-start, center, 12px, row nowrap);
   }
 

@@ -121,12 +121,17 @@ footer {
 .navbar__item-link {
   padding: 10px 20px;
   display: inline-block;
+  background-color: #D2D2D2;
+  transition: color 150ms linear, background-color 150ms linear;
   color: #1e1e1e;
   font-size: 12px;
   line-height: 100%;
   font-weight: 400;
   text-transform: capitalize;
-  background-color: #D2D2D2;
+}
+.navbar__item-link:hover {
+  color: #ffffff;
+  background-color: #e18a07;
 }
 
 .header {
@@ -155,7 +160,7 @@ footer {
 }
 @media only screen and (max-width: 576px) {
   .header-logo {
-    width: 125px;
+    width: 105px;
   }
 }
 .header-contact {
@@ -373,15 +378,28 @@ footer {
 }
 
 .footer__background {
+  height: 100%;
   padding: 40px 0px;
   background-color: #f5f6f9;
 }
 .footer__wrapper {
+  position: relative;
   gap: 0px;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   flex-flow: row nowrap;
   justify-content: space-between;
+}
+.footer__box:first-child {
+  height: 100%;
+  gap: 0px;
+  display: flex;
+  align-items: flex-start;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+.footer__box-logo {
+  height: 60px;
 }
 .footer__box:last-child {
   gap: 32px;
@@ -413,6 +431,8 @@ footer {
   color: inherit;
 }
 .footer__medias {
+  position: absolute;
+  bottom: 0;
   gap: 12px;
   display: flex;
   align-items: center;

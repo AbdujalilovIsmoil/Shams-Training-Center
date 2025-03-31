@@ -45,6 +45,8 @@
     &-link {
       padding: 10px 20px;
       display: inline-block;
+      background-color: $navbar-link-background-color;
+      transition: color 150ms linear, background-color 150ms linear;
       @include headingFonts(
         $navigation-link-color,
         12px,
@@ -52,7 +54,11 @@
         100%,
         capitalize
       );
-      background-color: $navbar-link-background-color;
+
+      &:hover {
+        color: $light-color;
+        background-color: $main-color;
+      }
     }
   }
 }
@@ -78,7 +84,7 @@
     width: 146px;
 
     @include sm {
-      width: 125px;
+      width: 105px;
     }
   }
 
