@@ -184,6 +184,18 @@ const init = () => {
     autoplay: {
       delay: 5000,
     },
+
+    breakpoints: {
+      200: {
+        slidesPerView: 1,
+      },
+      567: {
+        slidesPerView: 2,
+      },
+      768: {
+        slidesPerView: 4,
+      },
+    },
   });
 
   const teacher = document.getElementById("teacher");
