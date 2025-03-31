@@ -47,8 +47,12 @@ body {
   font-family: "Montserrat";
 }
 
-main {
+section {
   display: none;
+}
+
+section:nth-child(1) {
+  display: block;
 }
 
 footer {
@@ -140,6 +144,16 @@ footer {
   position: sticky;
   margin-bottom: 120px;
   background-color: #ffffff;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    margin-bottom: 75px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .header {
+    margin-bottom: 50px;
+  }
 }
 .header__container {
   padding: 28px 0px;
@@ -532,6 +546,11 @@ footer {
   min-width: 1040px;
   text-align: center;
 }
+@media only screen and (max-width: 1100px) {
+  .hero__content {
+    min-width: 0px;
+  }
+}
 .hero__content-span {
   color: #e18a07;
 }
@@ -544,6 +563,26 @@ footer {
   font-weight: 700;
   text-transform: none;
 }
+@media only screen and (max-width: 1100px) {
+  .hero__content-title {
+    font-size: 75px;
+    line-height: 90px;
+    margin-bottom: 12px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero__content-title {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 0px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero__content-title {
+    font-size: 40px;
+    line-height: 50px;
+  }
+}
 .hero__content-text {
   margin-bottom: 60px;
   color: #1e1e1e;
@@ -552,6 +591,25 @@ footer {
   font-weight: 400;
   text-transform: none;
 }
+@media only screen and (max-width: 1100px) {
+  .hero__content-text {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .hero__content-text {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero__content-text {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 30px;
+  }
+}
 .hero__contact {
   margin-bottom: 80px;
   gap: 20px;
@@ -559,6 +617,16 @@ footer {
   align-items: center;
   flex-flow: row nowrap;
   justify-content: center;
+}
+@media only screen and (max-width: 1100px) {
+  .hero__contact {
+    margin-bottom: 50px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .hero__contact {
+    gap: 10px;
+  }
 }
 .hero__contact-btn {
   padding: 18px 40px;
@@ -570,6 +638,23 @@ footer {
   font-weight: 400;
   text-transform: none;
   transition: color 150ms linear, background-color 150ms linear;
+}
+@media only screen and (max-width: 1100px) {
+  .hero__contact-btn {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 450px) {
+  .hero__contact-btn {
+    font-size: 12px;
+    padding: 16px 35px;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .hero__contact-btn {
+    font-size: 12px;
+    padding: 16px 25px;
+  }
 }
 .hero__contact-btn:hover {
   color: #1e1e1e;
@@ -595,6 +680,10 @@ footer {
   align-items: center;
   flex-flow: row nowrap;
   justify-content: center;
+}
+.hero__play-image {
+  width: 30px;
+  height: 30px;
 }
 .hero__play-text {
   width: 100%;

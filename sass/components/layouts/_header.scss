@@ -70,6 +70,14 @@
   margin-bottom: 120px;
   background-color: $light-color;
 
+  @include md {
+    margin-bottom: 75px;
+  }
+
+  @include sm {
+    margin-bottom: 50px;
+  }
+
   &__container {
     padding: 28px 0px;
     @include flexLayout(flex, space-between, center, 0px, row nowrap);

@@ -11,8 +11,16 @@ body {
   font-family: "Montserrat";
 }
 
-main {
+// main {
+//   display: none;
+// }
+
+section {
   display: none;
+}
+
+section:nth-child(1) {
+  display: block;
 }
 
 footer {

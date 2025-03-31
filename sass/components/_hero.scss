@@ -5,6 +5,10 @@
     min-width: 1040px;
     text-align: center;
 
+    @include defaultMediaQuery(1100px) {
+      min-width: 0px;
+    }
+
     &-span {
       color: $main-color;
     }
@@ -13,23 +17,79 @@
       margin-bottom: 24px;
       font-family: "Libre Baskerville";
       @include headingFonts($navigation-link-color, 90px, 700, 111.6px, none);
+
+      @include defaultMediaQuery(1100px) {
+        font-size: 75px;
+        line-height: 90px;
+        margin-bottom: 12px;
+      }
+
+      @include md {
+        font-size: 60px;
+        line-height: 70px;
+        margin-bottom: 0px;
+      }
+
+      @include sm {
+        font-size: 40px;
+        line-height: 50px;
+      }
     }
 
     &-text {
       margin-bottom: 60px;
       @include headingFonts($navigation-link-color, 24px, 400, 29.26px, none);
+
+      @include defaultMediaQuery(1100px) {
+        font-size: 20px;
+        margin-bottom: 45px;
+      }
+
+      @include md {
+        font-size: 18px;
+        margin-bottom: 40px;
+      }
+
+      @include sm {
+        font-size: 16px;
+        line-height: 25px;
+        margin-bottom: 30px;
+      }
     }
   }
 
   &__contact {
     margin-bottom: 80px;
     @include flexLayout(flex, center, center, 20px, row nowrap);
+
+    @include defaultMediaQuery(1100px) {
+      margin-bottom: 50px;
+    }
+
+    @include defaultMediaQuery(400px){
+      gap: 10px;
+    }
+
     &-btn {
       padding: 18px 40px;
       background-color: $navigation-link-color;
       border: 2px solid $navigation-link-color;
       @include headingFonts($light-color, 16px, 400, 19.5px, none);
       transition: color 150ms linear, background-color 150ms linear;
+
+      @include defaultMediaQuery(1100px) {
+        font-size: 14px;
+      }
+
+      @include defaultMediaQuery(450px) {
+        font-size: 12px;
+        padding: 16px 35px;
+      }
+
+      @include defaultMediaQuery(400px) {
+        font-size: 12px;
+        padding: 16px 25px;
+      }
 
       &:hover {
         color: $navigation-link-color;
@@ -56,6 +116,11 @@
     border-radius: 50%;
     margin: 0 auto 60px auto;
     @include flexLayout(flex, center, center, 0px, row nowrap);
+
+    &-image {
+      width: 30px;
+      height: 30px;
+    }
 
     &-text {
       width: 100%;
@@ -86,6 +151,4 @@
       }
     }
   }
-
-
 }
