@@ -50,6 +50,8 @@
   }
 
   &__item {
+    min-width: calc(100% / 2%);
+    max-width: calc(100% / 2%);
     padding-bottom: 0px;
     border-bottom: 1.5px solid #d2d2d2;
 
