@@ -176,50 +176,6 @@ const init = () => {
     testimonialsList.append(element);
   }
 
-  new Swiper(".swiper", {
-    loop: true,
-    slidesPerView: 4,
-    grabCursor: true,
-    spaceBetween: 10,
-    autoplay: {
-      delay: 5000,
-    },
-
-    breakpoints: {
-      200: {
-        slidesPerView: 1,
-      },
-      567: {
-        slidesPerView: 2,
-      },
-      768: {
-        slidesPerView: 4,
-      },
-    },
-  });
-
-  const teacher = document.getElementById("teacher");
-  const readStudent = document.getElementById("read");
-  const middleStudent = document.getElementById("middle");
-  const successStudent = document.getElementById("success");
-
-  const intervalResult = (tag, count, second) => {
-    let index = 0;
-    const ineterval = setInterval(() => {
-      index += second;
-      tag.innerHTML = `+${index}`;
-
-      if (index === count) {
-        clearInterval(ineterval);
-      }
-    }, second);
-  };
-
-  intervalResult(readStudent, 1700, 10);
-  intervalResult(successStudent, 70, 1);
-  intervalResult(middleStudent, 1000, 10);
-  intervalResult(teacher, 12, 1);
-
   const form = document.getElementById("contact__form");
   const userName = document.getElementById("user-name");
   let userNumber = document.getElementById("user-number");
@@ -282,35 +238,6 @@ Foydalanuvchining raqami: ${userNumber.value}
     .join("");
 
   text.innerHTML = newText;
-
-  const chevronDown = document.querySelector(".fa-chevron-down");
-  const selectTop = document.querySelector(".header-select__top");
-  const icons = document.querySelectorAll(".header-select__language");
-  const headerTopText = document.querySelector(".header-select__top-text");
-  const selectLanguages = document.querySelector(".header-select-languages");
-
-  const openLanguages = () => {
-    chevronDown.classList.toggle("active");
-    selectLanguages.classList.toggle("header-select-languages--open");
-  };
-
-  selectTop.addEventListener("click", openLanguages);
-
-  const hideIcon = () => {
-    icons.forEach((el) => {
-      el.children[1].classList.remove("visible");
-    });
-  };
-
-  const showIcon = (i) => {
-    icons[i].children[1].classList.add("visible");
-
-    localStorage.setItem("lang", icons[i].getAttribute("data-lang"));
-
-    getLanguageData(icons[i].getAttribute("data-lang"));
-
-    headerTopText.innerHTML = icons[i].children[0].innerHTML;
-  };
 
   const returnLang = (lang) => {
     if (lang === "uz") {
