@@ -51,3 +51,51 @@ icons.forEach((el, i) => {
     openLanguages();
   });
 });
+
+const playText = {
+  uz: "Video Ko'rish Qo'llanma",
+  ru: "Руководство по просмотру видео",
+  en: "Video Watch Guide",
+  arab: "دليل مشاهدة الفيديو",
+};
+
+const renderPlayText = (lang) => {
+  const newText = playText[lang]
+    .split("")
+    .map((char, i) => {
+      return `<span style="transform:rotate(${i * 15}deg)">${char}</span>`;
+    })
+    .join("");
+
+  text.innerHTML = newText;
+};
+
+renderPlayText(language);
+
+const observer = new MutationObserver((mutationList) => {
+  for (const mutation of mutationList) {
+    if (mutation.type === "childList") {
+      const lang = mutation.target.innerHTML.trim();
+
+      console.log(lang);
+
+      if (lang === "English") {
+        renderPlayText("en");
+      }
+      if (lang === "O'zbek") {
+        renderPlayText("uz");
+      }
+      if (lang === "Arab") {
+        renderPlayText("arab");
+      }
+      if (lang === "Русский") {
+        renderPlayText("ru");
+      }
+    }
+  }
+});
+
+observer.observe(headerTopText, {
+  childList: true,
+  subtree: true,
+});

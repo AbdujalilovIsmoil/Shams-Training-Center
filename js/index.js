@@ -29,7 +29,6 @@ const showToastify = ({ text, color }) => {
   }).showToast();
 };
 
-let language = localStorage.getItem("lang") || "uz";
 
 const successFullyData = {
   ru: "Данные отправлены успешно.",
@@ -229,14 +228,14 @@ form.addEventListener("submit", sendFormData);
 
 const text = document.querySelector(".hero__play-text");
 
-const newText = text.innerText
-  .split("")
-  .map((char, i) => {
-    return `<span style="transform:rotate(${i * 15}deg)">${char}</span>`;
-  })
-  .join("");
+// const newText = text.innerText
+//   .split("")
+//   .map((char, i) => {
+//     return `<span style="transform:rotate(${i * 15}deg)">${char}</span>`;
+//   })
+//   .join("");
 
-text.innerHTML = newText;
+// text.innerHTML = newText;
 
 function getLanguageData(lang) {
   const navLinks = document.querySelectorAll(".nav__item-link");
@@ -329,22 +328,6 @@ function getLanguageData(lang) {
   const contactDarkTag = document.querySelector(".hero__contact-btn--dark");
 
   contactDarkTag.innerText = contactDarkBtnText[lang];
-
-  const playText = {
-    uz: "Video Ko'rish Qo'llanma",
-    ru: "Руководство по просмотру видео",
-    en: "Video Watch Guide",
-    arab: "دليل مشاهدة الفيديو",
-  };
-
-  const newText = playText[lang]
-    .split("")
-    .map((char, i) => {
-      return `<span style="transform:rotate(${i * 15}deg)">${char}</span>`;
-    })
-    .join("");
-
-  text.innerHTML = newText;
 
   const resultLangTexteOneData = {
     uz: "O’qigan o’quvchilar soni",
