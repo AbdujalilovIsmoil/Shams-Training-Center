@@ -489,7 +489,7 @@ Foydalanuvchining raqami: ${userNumber.value}
         Почему именно <span class="services-span">мы?</span>
       `,
       en: `
-        Почему именно <span class="services-span">we?</span>
+        Why exactly <span class="services-span">we?</span>
       `,
       arab: `
         لماذا اسمي <span class="services-span">نحن؟</span>
