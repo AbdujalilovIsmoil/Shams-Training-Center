@@ -8,7 +8,7 @@
   }
 
   &__list {
-    @include gridLayout(grid, 4, 50px);
+    @include gridLayout(grid, 4, 140px);
 
     @include defaultMediaQuery(1200px) {
       @include gridLayout(grid, 2, 50px);

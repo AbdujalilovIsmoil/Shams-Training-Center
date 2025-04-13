@@ -845,7 +845,7 @@ body {
   }
 }
 .results__list {
-  gap: 50px;
+  gap: 140px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
