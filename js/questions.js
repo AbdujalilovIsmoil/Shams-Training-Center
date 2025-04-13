@@ -26,3 +26,28 @@ const showIcon = (i) => {
 
   headerTopText.innerHTML = icons[i].children[0].innerHTML;
 };
+
+hideIcon();
+
+const returnLang = (lang) => {
+  if (lang === "uz") {
+    return 0;
+  } else if (lang === "en") {
+    return 1;
+  } else if (lang === "ru") {
+    return 2;
+  } else {
+    return 3;
+  }
+};
+
+showIcon(returnLang(language));
+
+icons.forEach((el, i) => {
+  el.addEventListener("click", (e) => {
+    hideIcon();
+    showIcon(i);
+
+    openLanguages();
+  });
+});
