@@ -358,7 +358,7 @@ Foydalanuvchining raqami: ${userNumber.value}
       el.innerText = navLinksLanguages[lang][i];
     });
 
-    headerContact.inner = headerContactLanguages[lang];
+    headerContact.innerHTML = headerContactLanguages[lang];
 
     const heroContentTitleLanguages = {
       uz: `<span class="hero__content-span">
