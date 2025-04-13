@@ -552,6 +552,40 @@ function getLanguageData(lang) {
          `,
     },
   };
+  const serviceItemSixData = {
+    uz: {
+      title: "Oson kirish",
+      text: `
+          O‘quvchilar kurslarga telefon yoki kompyuter orqali kirishadi.
+          Darslar va materiallar Telegram kanali orqali taqdim etiladi,
+          o‘rganish istalgan joyda va vaqtda mumkin.
+        `,
+    },
+    ru: {
+      title: "Легкий доступ",
+      text: `
+          Студенты получают доступ к курсам через телефон или компьютер.
+          Уроки и материалы предоставляются через канал Telegram,
+          Обучение возможно в любом месте и в любое время.
+        `,
+    },
+    en: {
+      title: "Easy access",
+      text: `
+          Students access courses via phone or computer.
+          Lessons and materials are provided via Telegram channel,
+          Learning is possible anywhere and at any time.
+        `,
+    },
+    arab: {
+      title: "سهولة الوصول",
+      text: `
+          يمكن للطلاب الوصول إلى الدورات عبر الهاتف أو الحاسوب.
+          تُقدم الدروس والمواد عبر قناة تيليجرام.
+          التعلم متاح في أي مكان وزمان.
+         `,
+    },
+  };
 
   const serviceItemTitles = document.querySelectorAll(".services__item-title");
   const serviceItemTexts = document.querySelectorAll(".services__item-text");
@@ -565,7 +599,9 @@ function getLanguageData(lang) {
   serviceItemTitles[3].innerHTML = serviceItemFourData[lang].title;
   serviceItemTexts[3].innerHTML = serviceItemFourData[lang].text;
   serviceItemTitles[4].innerHTML = serviceItemFiveData[lang].title;
-  serviceItemTexts[4].innerHTML = serviceItemFiveData[lang].text;
+  serviceItemTitles[4].innerHTML = serviceItemFiveData[lang].title;
+  serviceItemTitles[5].innerHTML = serviceItemSixData[lang].title;
+  serviceItemTexts[5].innerHTML = serviceItemSixData[lang].text;
 
   const highlightContentTitle = document.querySelector(
     ".highlight__content-title"

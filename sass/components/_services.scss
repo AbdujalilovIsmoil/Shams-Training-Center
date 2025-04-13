@@ -40,9 +40,9 @@
   }
 
   &__item {
-    width: 100%;
     padding: 24px;
     text-align: center;
+
     background-color: $services-background-color;
 
     @include sm {
