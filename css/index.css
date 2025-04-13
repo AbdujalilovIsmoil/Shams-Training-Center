@@ -639,6 +639,7 @@ body {
   color: #e18a07;
 }
 .hero__content-title {
+  position: relative;
   margin-bottom: 24px;
   font-family: "Libre Baskerville";
   color: #1e1e1e;
@@ -646,6 +647,46 @@ body {
   line-height: 111.6px;
   font-weight: 700;
   text-transform: none;
+}
+.hero__content-title::before {
+  bottom: -20px;
+  left: -40px;
+  width: 35px;
+  position: absolute;
+  content: url("../../images/svg/hero-left-icon.svg");
+}
+@media only screen and (max-width: 768px) {
+  .hero__content-title::before {
+    left: 40px;
+    bottom: -10px;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero__content-title::before {
+    left: 20px;
+    bottom: -5px;
+  }
+}
+.hero__content-title::after {
+  top: 30%;
+  right: -40px;
+  width: 70px;
+  position: absolute;
+  content: url("../../images/svg/hero-right-icon.svg");
+}
+@media only screen and (max-width: 768px) {
+  .hero__content-title::after {
+    right: 0%;
+    top: -20%;
+  }
+}
+@media only screen and (max-width: 576px) {
+  .hero__content-title::after {
+    top: -25%;
+    right: 15%;
+    width: 10px;
+    height: 10px;
+  }
 }
 @media only screen and (max-width: 1100px) {
   .hero__content-title {
@@ -656,14 +697,14 @@ body {
 }
 @media only screen and (max-width: 768px) {
   .hero__content-title {
-    font-size: 60px;
+    font-size: 50px;
     line-height: 70px;
     margin-bottom: 0px;
   }
 }
 @media only screen and (max-width: 576px) {
   .hero__content-title {
-    font-size: 40px;
+    font-size: 32px;
     line-height: 50px;
   }
 }
@@ -689,7 +730,7 @@ body {
 }
 @media only screen and (max-width: 576px) {
   .hero__content-text {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 25px;
     margin-bottom: 30px;
   }

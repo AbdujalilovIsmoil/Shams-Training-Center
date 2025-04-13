@@ -14,9 +14,49 @@
     }
 
     &-title {
+      position: relative;
       margin-bottom: 24px;
       font-family: "Libre Baskerville";
       @include headingFonts($navigation-link-color, 90px, 700, 111.6px, none);
+
+      &::before {
+        bottom: -20px;
+        left: -40px;
+        width: 35px;
+        position: absolute;
+        content: url("../../images/svg/hero-left-icon.svg");
+
+        @include md {
+          left: 40px;
+          bottom: -10px;
+        }
+
+        @include sm {
+          left: 20px;
+          bottom: -5px;
+        }
+      }
+
+      &::after {
+        top: 30%;
+        right: -40px;
+        width: 70px;
+        position: absolute;
+        content: url("../../images/svg/hero-right-icon.svg");
+
+        @include md {
+          right: 0%;
+          top: -20%;
+        }
+
+        @include sm {
+          top: -25%;
+          right: 15%;
+
+          width: 10px;
+          height: 10px;
+        }
+      }
 
       @include defaultMediaQuery(1100px) {
         font-size: 75px;
@@ -25,13 +65,13 @@
       }
 
       @include md {
-        font-size: 60px;
+        font-size: 50px;
         line-height: 70px;
         margin-bottom: 0px;
       }
 
       @include sm {
-        font-size: 40px;
+        font-size: 32px;
         line-height: 50px;
       }
     }
@@ -51,7 +91,7 @@
       }
 
       @include sm {
-        font-size: 16px;
+        font-size: 14px;
         line-height: 25px;
         margin-bottom: 30px;
       }
@@ -66,7 +106,7 @@
       margin-bottom: 50px;
     }
 
-    @include defaultMediaQuery(400px){
+    @include defaultMediaQuery(400px) {
       gap: 10px;
     }
 
