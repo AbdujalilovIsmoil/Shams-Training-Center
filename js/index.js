@@ -29,12 +29,7 @@ const showToastify = ({ text, color }) => {
   }).showToast();
 };
 
-
-const successFullyData = {
-  ru: "Данные отправлены успешно.",
-  en: "The data was sent successfully.",
-  uz: "Ma'lumotlar muvaffaqiyatli yuborildi.",
-};
+let language = localStorage.getItem("lang") || "uz";
 
 const testimonials = [
   {
@@ -186,6 +181,10 @@ const onChangeNumberInput = (e) => {
 
 userNumber.addEventListener("keydown", onChangeNumberInput);
 
+const text = document.querySelector(".hero__play-text");
+
+let updatedLang = language;
+
 const sendFormData = async (e) => {
   e.preventDefault();
 
@@ -211,9 +210,16 @@ Foydalanuvchining raqami: ${userNumber.value}
     const { ok } = await request.json();
 
     if (ok) {
+      const successFullyData = {
+        ru: "Данные отправлены успешно.",
+        en: "The data was sent successfully.",
+        uz: "Ma'lumotlar muvaffaqiyatli yuborildi.",
+        arab: "تم إرسال البيانات بنجاح.",
+      };
+
       showToastify({
         color: "#4CAF50",
-        text: successFullyData[language],
+        text: successFullyData[updatedLang],
       });
 
       userName.value = "";
@@ -226,18 +232,8 @@ Foydalanuvchining raqami: ${userNumber.value}
 
 form.addEventListener("submit", sendFormData);
 
-const text = document.querySelector(".hero__play-text");
-
-// const newText = text.innerText
-//   .split("")
-//   .map((char, i) => {
-//     return `<span style="transform:rotate(${i * 15}deg)">${char}</span>`;
-//   })
-//   .join("");
-
-// text.innerHTML = newText;
-
 function getLanguageData(lang) {
+  updatedLang = lang;
   const navLinks = document.querySelectorAll(".nav__item-link");
   const headerContact = document.querySelector(".header-contact");
 
