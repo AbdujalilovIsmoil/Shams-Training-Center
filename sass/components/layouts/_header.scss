@@ -164,10 +164,10 @@
   &-select__top {
     height: 100%;
     padding: 0 10px;
+    border: 2.5px solid $navigation-link-color;
     @include flexLayout(flex, space-between, center, 5px, row nowrap);
 
     cursor: pointer;
-    border: 1px solid $navigation-link-color;
 
     @include flexLayout(flex, space-between, center, none, row nowrap);
     &-text {

@@ -229,13 +229,13 @@ body {
 .header-select__top {
   height: 100%;
   padding: 0 10px;
+  border: 2.5px solid #1e1e1e;
   gap: 5px;
   display: flex;
   align-items: center;
   flex-flow: row nowrap;
   justify-content: space-between;
   cursor: pointer;
-  border: 1px solid #1e1e1e;
   gap: none;
   display: flex;
   align-items: center;
