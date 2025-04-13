@@ -143,7 +143,6 @@ const showElements = (index) => {
 };
 
 hideElements();
-showElements(0);
 
 for (let i = 0; i < questionsBox.length; i++) {
   const openContent = () => {
