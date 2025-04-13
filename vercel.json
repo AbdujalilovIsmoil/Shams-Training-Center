@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "http://shamsoquvmarkaz.uz/:path*",
+      "destination": "https://shamsoquvmarkaz.uz/:path*",
+      "permanent": true
+    }
+  ]
+}
