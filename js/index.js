@@ -153,7 +153,7 @@ const init = () => {
   showElements(0);
 
   for (let i = 0; i < questionsBox.length; i++) {
-    const openContent = (e) => {
+    const openContent = () => {
       hideElements();
       showElements(i);
     };
@@ -869,11 +869,11 @@ Foydalanuvchining raqami: ${userNumber.value}
 
     const definitionInfoOneData = {
       uz: {
-        dollar: "$131.07",
+        dollar: "$132",
         tarrifs: "Yengil tarif",
         price: "1 700 000 so’m",
         titles: [
-          "1 oyda 25 ta onlayn darslik",
+          "1 oyda 20 ta onlayn darslik",
           "Har bir dars 40 daqiqadan bo’lib otadi",
         ],
         info: "Bizning markazda darslar xisoblanadi kurslar emas",
@@ -888,7 +888,7 @@ Foydalanuvchining raqami: ${userNumber.value}
         tarrifs: "Лайт тариф",
         price: "1 700 000 сум",
         titles: [
-          "25 онлайн-учебников за 1 месяц",
+          "20 онлайн-учебников за 1 месяц",
           "Каждое занятие длится 40 минут",
         ],
         info: "В нашем центре засчитываются занятия, а не курсы",
@@ -903,7 +903,7 @@ Foydalanuvchining raqami: ${userNumber.value}
         tarrifs: "Light tariff",
         price: "1 700 000 sum",
         titles: [
-          "25 online tutorials in 1 month",
+          "20 online tutorials in 1 month",
           "Each lesson lasts 40 minutes.",
         ],
         info: "In our center, classes are counted, not courses.",
@@ -918,7 +918,7 @@ Foydalanuvchining raqami: ${userNumber.value}
         tarrifs: "التعرفة الخفيفة",
         price: "1700000 سوم",
         titles: [
-          "25 درسًا تعليميًا عبر الإنترنت في شهر واحد",
+          "20 درسًا تعليميًا عبر الإنترنت في شهر واحد",
           "كل درس يستغرق 40 دقيقة.",
         ],
         info: "في مركزنا يتم احتساب الفصول وليس الدورات.",
@@ -963,7 +963,7 @@ Foydalanuvchining raqami: ${userNumber.value}
       en: {
         dollar: "$177.33",
         tarrifs: "Average tariff",
-        price: "1 700 000 sum",
+        price: "2 300 000 sum",
         titles: [
           "15 online tutorials in 1 month",
           "Each lesson lasts 40 minutes.",
@@ -978,7 +978,7 @@ Foydalanuvchining raqami: ${userNumber.value}
       arab: {
         dollar: "$177.33",
         tarrifs: "متوسط ​​التعريفة",
-        price: "1700000 سوم",
+        price: "2 300 000 سوم",
         titles: [
           "15 درسًا تعليميًا عبر الإنترنت في شهر واحد",
           "كل درس يستغرق 40 دقيقة.",

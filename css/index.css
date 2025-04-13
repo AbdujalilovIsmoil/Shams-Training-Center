@@ -951,8 +951,8 @@ body {
 }
 @media only screen and (max-width: 576px) {
   .services__list {
-    grid-template-columns: repeat(1, 1fr);
     grid-gap: 16px;
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 .services__item {
@@ -1480,8 +1480,10 @@ body {
 }
 .questions__container {
   gap: 36px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  align-items: flex-start;
+  flex-flow: row nowrap;
+  justify-content: space-between;
 }
 @media only screen and (max-width: 1040px) {
   .questions__container {

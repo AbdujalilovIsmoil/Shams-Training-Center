@@ -30,7 +30,7 @@
   }
 
   &__container {
-    @include gridLayout(grid, 2, 36px);
+    @include flexLayout(flex, space-between, flex-start, 36px, row nowrap);
 
     @include defaultMediaQuery(1040px) {
       @include gridLayout(grid, 1, 36px);
