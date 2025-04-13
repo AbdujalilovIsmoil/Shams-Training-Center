@@ -15,7 +15,6 @@
 
     &-title {
       position: relative;
-      margin-bottom: 24px;
       font-family: "Libre Baskerville";
       @include headingFonts($navigation-link-color, 90px, 700, 111.6px, none);
 
