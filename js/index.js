@@ -760,13 +760,13 @@ function getLanguageData(lang) {
 
   const definitionData = {
     uz: `
-        Bizning <span class="definition-span">Tariflar</span>
+        Bizning <span class="definition-span">tariflar</span>
       `,
     ru: `
-        Наш <span class="definition-span">Тарифы</span>
+        Наш <span class="definition-span">тарифы</span>
       `,
     en: `
-        Our <span class="definition-span">Tariffs</span>
+        Our <span class="definition-span">tariffs</span>
       `,
     arab: `
         ملكنا <span class="definition-span">التعريفات</span>
