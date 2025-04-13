@@ -91,15 +91,8 @@
   }
 
   &__media {
-    &:hover {
-      border-radius: 50%;
-      background-color: $navigation-link-color;
-      transition: background-color 150ms linear;
-    }
-
-    &:hover &-icon {
-      color: $light-color;
-    }
+    width: 40px;
+    height: 40px;
 
     a {
       width: 40px;
@@ -110,6 +103,8 @@
     }
 
     &-icon {
+      width: 20px;
+      height: 20px;
       font-size: 20px;
       color: $navigation-link-color;
       transition: color 150ms linear;

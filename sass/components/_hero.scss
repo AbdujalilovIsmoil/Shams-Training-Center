@@ -45,8 +45,8 @@
         content: url("../../images/svg/hero-right-icon.svg");
 
         @include md {
-          right: 0%;
           top: -20%;
+          right: -10px;
         }
 
         @include sm {
@@ -55,8 +55,6 @@
 
           // width: 10px;
           // height: 10px;
-
-          display: none;
         }
       }
 
