@@ -786,7 +786,7 @@ function getLanguageData(lang) {
         "1 oyda 15 ta onlayn darslik",
         "Har bir dars 40 daqiqadan bo’lib otadi",
       ],
-      info: "Bizning markazda darslar xisoblanadi kurslar emas",
+      info: "Bizning markazda darslar xisoblanadi kunlar emas",
       text: `
           Kurs olishda ikkilanayotgan bo’lsangiz uni bepul qismini sinab
           ko’rishingiz mumkin`,
@@ -801,7 +801,7 @@ function getLanguageData(lang) {
         "15 онлайн-учебников за 1 месяц",
         "Каждое занятие длится 40 минут",
       ],
-      info: "В нашем центре засчитываются занятия, а не курсы",
+      info: "В нашем центре подсчитываются уроки, а не дни.",
       text: `
           Если вы не решаетесь пройти курс, попробуйте бесплатную часть.
           ты можешь видеть`,
@@ -816,7 +816,7 @@ function getLanguageData(lang) {
         "15 online tutorials in 1 month",
         "Each lesson lasts 40 minutes.",
       ],
-      info: "In our center, classes are counted, not courses.",
+      info: "In our center, lessons are counted, not days.",
       text: `
           If you are hesitant to take the course, try the free part.
           you can see`,
@@ -831,7 +831,7 @@ function getLanguageData(lang) {
         "15 درسًا تعليميًا عبر الإنترنت في شهر واحد",
         "كل درس يستغرق 40 دقيقة.",
       ],
-      info: "في مركزنا يتم احتساب الفصول وليس الدورات.",
+      info: "في مركزنا يتم حساب الدروس وليس الأيام.",
       text: `
           إذا كنت مترددًا في أخذ الدورة، فجرب الجزء المجاني. يمكنك أن ترى`,
       video: "شاهد الفيديو",
@@ -848,7 +848,7 @@ function getLanguageData(lang) {
         "1 oyda 20 ta onlayn darslik",
         "Har bir dars 40 daqiqadan bo’lib otadi",
       ],
-      info: "Bizning markazda darslar xisoblanadi kurslar emas",
+      info: "Bizning markazda darslar xisoblanadi kunlar emas",
       text: `
           Kurs olishda ikkilanayotgan bo’lsangiz uni bepul qismini sinab
           ko’rishingiz mumkin`,
@@ -863,7 +863,7 @@ function getLanguageData(lang) {
         "20 онлайн-учебников за 1 месяц",
         "Каждое занятие длится 40 минут",
       ],
-      info: "В нашем центре засчитываются занятия, а не курсы",
+      info: "В нашем центре подсчитываются уроки, а не дни.",
       text: `
           Если вы не решаетесь пройти курс, попробуйте бесплатную часть.
           ты можешь видеть`,
@@ -878,7 +878,7 @@ function getLanguageData(lang) {
         "20 online tutorials in 1 month",
         "Each lesson lasts 40 minutes.",
       ],
-      info: "In our center, classes are counted, not courses.",
+      info: "In our center, lessons are counted, not days.",
       text: `
           If you are hesitant to take the course, try the free part.
           you can see`,
@@ -893,7 +893,7 @@ function getLanguageData(lang) {
         "20 درسًا تعليميًا عبر الإنترنت في شهر واحد",
         "كل درس يستغرق 40 دقيقة.",
       ],
-      info: "في مركزنا يتم احتساب الفصول وليس الدورات.",
+      info: "في مركزنا يتم حساب الدروس وليس الأيام.",
       text: `
           إذا كنت مترددًا في أخذ الدورة، فجرب الجزء المجاني. يمكنك أن ترى`,
       video: "شاهد الفيديو",
@@ -910,7 +910,7 @@ function getLanguageData(lang) {
         "1 oyda 25 ta onlayn darslik",
         "Har bir dars 40 daqiqadan bo’lib otadi",
       ],
-      info: "Bizning markazda darslar xisoblanadi kurslar emas",
+      info: "Bizning markazda darslar xisoblanadi kunlar emas",
       text: `
           Kurs olishda ikkilanayotgan bo’lsangiz uni bepul qismini sinab
           ko’rishingiz mumkin`,
@@ -925,7 +925,7 @@ function getLanguageData(lang) {
         "25 онлайн-учебников за 1 месяц",
         "Каждое занятие длится 40 минут",
       ],
-      info: "В нашем центре засчитываются занятия, а не курсы",
+      info: "В нашем центре подсчитываются уроки, а не дни.",
       text: `
           Если вы не решаетесь пройти курс, попробуйте бесплатную часть.
           ты можешь видеть`,
@@ -940,7 +940,7 @@ function getLanguageData(lang) {
         "25 online tutorials in 1 month",
         "Each lesson lasts 40 minutes.",
       ],
-      info: "In our center, classes are counted, not courses.",
+      info: "In our center, lessons are counted, not days.",
       text: `
           If you are hesitant to take the course, try the free part.
           you can see`,
@@ -955,7 +955,7 @@ function getLanguageData(lang) {
         "25 درسًا تعليميًا عبر الإنترنت في شهر واحد",
         "كل درس يستغرق 40 دقيقة.",
       ],
-      info: "في مركزنا يتم احتساب الفصول وليس الدورات.",
+      info: "في مركزنا يتم حساب الدروس وليس الأيام.",
       text: `
           إذا كنت مترددًا في أخذ الدورة، فجرب الجزء المجاني. يمكنك أن ترى`,
       video: "شاهد الفيديو",
