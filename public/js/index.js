@@ -1040,7 +1040,7 @@ function getLanguageData(lang) {
                   <a
                     role="button"
                     target="_blank"
-                    href="https://t.me/Shams_oquvmarkaz_Admin"
+                    href="https://t.me/Shams_markaz_admin"
                     class="definition__view-btn definition__view-btn--orange"
                   >
                      ${definitionInfoOneData[lang]?.contact}
@@ -1125,7 +1125,7 @@ function getLanguageData(lang) {
                   <a
                     role="button"
                     target="_blank"
-                    href="https://t.me/Shams_oquvmarkaz_Admin"
+                    href="https://t.me/Shams_markaz_admin"
                     class="definition__view-btn definition__view-btn--orange"
                   >
                      ${definitionInfoTwoData[lang]?.contact}
@@ -1211,7 +1211,7 @@ function getLanguageData(lang) {
                   <a
                     role="button"
                     target="_blank"
-                    href="https://t.me/Shams_oquvmarkaz_Admin"
+                    href="https://t.me/Shams_markaz_admin"
                     class="definition__view-btn definition__view-btn--orange"
                   >
                      ${definitionInfoThreeData[lang]?.contact}
@@ -2141,9 +2141,9 @@ function getLanguageData(lang) {
       <a
         target="_blank"
         class="footer__telegram-contact-link"
-        href="https://t.me/Shams_oquvmarkaz_Admin"
+        href="https://t.me/Shams_markaz_admin"
       >
-        @Shams_oquvmarkaz_Admin
+        @Shams_markaz_admin
       </a>
     `;
 
